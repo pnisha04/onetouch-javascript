@@ -4323,8 +4323,9 @@ ul.achivement li .medium {
 .work-process-area .work-pro-items .item h4 {
   position: relative;
   z-index: 1;
-  line-height: 60px;
+  line-height: 25px;
   font-weight: 700;
+  margin-bottom: 0px !important;
 }
 
 .work-process-area .work-pro-items .item h4 span {
@@ -4340,7 +4341,7 @@ ul.achivement li .medium {
 
 .work-process-area .work-pro-items .item {
   border: 1px solid #e7e7e7;
-  padding: 67px 50px;
+  padding: 10px 9px;
   background: #ffffff;
   position: relative;
   z-index: 1;
@@ -4348,7 +4349,7 @@ ul.achivement li .medium {
 }
 
 .work-process-area .work-pro-items .item img {
-  height: 70px;
+  height: 180px;
 }
 
 .work-process-area .work-pro-items .item p {
@@ -4731,7 +4732,7 @@ ul.achivement li .medium {
   z-index: 1;
 }
 
-.chooseus-area .thumb-inner::after {
+/* .chooseus-area .thumb-inner::after {
   position: absolute;
   left: -25%;
   bottom: -200px;
@@ -4741,7 +4742,7 @@ ul.achivement li .medium {
   border: 60px solid #FF5E14;
   z-index: -1;
   border-radius: 50%;
-}
+} */
 
 .yellow .chooseus-area .thumb-inner::after {
   border: 60px solid #febc35;
@@ -9549,6 +9550,7 @@ background: #ffffff;
   transition: all 0.35s ease-in-out;
   border: 2px solid #e7e7e7;
   border-radius: 30px;
+  min-height: 361px;
 }
 
 .services-style-five {
@@ -9722,4 +9724,13 @@ background: #ffffff;
     padding-bottom: 50px;
   }
 
+}
+
+
+
+/* //dummy css */
+
+.test-btn button{
+  width: 156px;
+  height: 48px;
 }
