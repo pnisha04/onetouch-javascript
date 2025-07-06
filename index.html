@@ -46,17 +46,8 @@
             <div class="row align-center">
                 <div class="col-lg-3 shape">
                     <ul class="social">
-                        <li class="facebook">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        </li>
-                        <li class="twitter">
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                        </li>
-                        <li class="pinterest">
-                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                        </li>
                         <li class="linkedin">
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.linkedin.com/company/onetouchcontrols/"><i class="fab fa-linkedin-in"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -65,11 +56,11 @@
                         <ul class="list">
                             <li>
                                 <i class="fas fa-map-marker-alt"></i>
-                                Mumbai, India
+                                Navi Mumbai, India
                             </li>
                             <li>
                                 <i class="fas fa-envelope-open"></i>
-                                <a href="mailto:info@gmail.com">sales@onetouchcontrols.in</a>
+                                <a href="mailto:info@onetouchcontrols.in">info@onetouchcontrols.in</a>
                             </li>
                         </ul>
                         
@@ -111,17 +102,11 @@
                             <a href="about-us.html" style="color: black;">About Us</a>
                         </li>
                         <li class="dropdown">
-                            <a href="product-details.html" class="dropdown-toggle" data-toggle="dropdown" style="color: black;">Services</a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: black;" onclick="return false;">Services</a>
                             <ul class="dropdown-menu">
-                                <li><a href="product-details.html">All Products</a></li>
-                                <li><a href="control-panel.html">Control Panel</a></li>
-                                <li><a href="encoder.html">Encoder</a></li>
-                                <li><a href="HMI.html">HMI</a></li>
-                                <li><a href="motion-controller.html">Motion Controller</a></li>
-                                <li><a href="PLC.html">PLC</a></li>
-                                <li><a href="power-supply.html">Power Supply</a></li>
-                                <li><a href="servo.html">Servo</a></li>
-                                <li><a href="VFD.html">VFD</a></li>
+                                <li><a href="machine-vision.html">Machine Vision</a></li>
+                                <li><a href="robotics.html">Robotics</a></li>
+                                <li><a href="PLC.html">PLC & HMI</a></li>
                             </ul>
                         </li>
                         <li>
@@ -492,7 +477,7 @@
                                 </li>
                                 <li>
                                     <i class="fas fa-envelope-open"></i>
-                                    <a href="mailto:info@gmail.com">sales@onetouchcontrols.in</a>
+                                    <a href="mailto:info@onetouchcontrols.in">info@onetouchcontrols.in</a>
                                 </li>
                             </ul>
                         </div>
@@ -556,6 +541,39 @@
     <script src="assets/js/count-to.js"></script>
     <script src="assets/js/bootsnav.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <!-- Additional JavaScript for local file compatibility -->
+    <script>
+        $(document).ready(function() {
+            console.log('Page loaded successfully');
+            
+            // Ensure dropdown works when opening file directly
+            $('.dropdown-toggle').on('click', function(e) {
+                console.log('Dropdown clicked');
+                e.preventDefault();
+                var $dropdown = $(this).next('.dropdown-menu');
+                $('.dropdown-menu').not($dropdown).hide();
+                $dropdown.toggle();
+            });
+            
+            // Close dropdown when clicking outside
+            $(document).on('click', function(e) {
+                if (!$(e.target).closest('.dropdown').length) {
+                    $('.dropdown-menu').hide();
+                }
+            });
+            
+            // Handle dropdown item clicks
+            $('.dropdown-menu a').on('click', function(e) {
+                console.log('Dropdown item clicked: ' + $(this).attr('href'));
+                e.stopPropagation();
+                window.location.href = $(this).attr('href');
+            });
+            
+            // Test if PLC.html file exists
+            console.log('Current location: ' + window.location.href);
+        });
+    </script>
 
 </body>
 </html>
