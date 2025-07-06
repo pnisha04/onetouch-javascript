@@ -1,0 +1,136 @@
+<!-- Unified Header Component -->
+<!-- Start Header Top with Navigation -->
+<div class="unified-header">
+    <!-- Top Bar with Social Links and Contact Info -->
+    <div class="top-bar-area bg-dark text-light">
+        <div class="container">
+            <div class="row align-center">
+                <div class="col-lg-3 shape">
+                    <ul class="social">
+                        <li class="linkedin">
+                            <a href="https://www.linkedin.com/company/onetouchcontrols/"><i class="fab fa-linkedin-in"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-9 info float-right text-right">
+                    <div class="info box">
+                        <ul class="list">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                Navi Mumbai, India
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope-open"></i>
+                                <a href="mailto:info@onetouchcontrols.in">info@onetouchcontrols.in</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Main Navigation -->
+    <header id="home">
+        <nav class="navbar navbar-default inc-top-bar navbar-fixed navbar-transparent white bootsnav" style="background-color: white;">
+            <div class="container">
+                <!-- Start Header Navigation -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/img/onetouch-logo.png" class="logo logo-display" alt="Logo">
+                        <img src="assets/img/onetouch-logo.png" class="logo logo-scrolled" alt="Logo">
+                    </a>
+                </div>
+                <!-- End Header Navigation -->
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav navbar-right" data-in="#" data-out="#">
+                        <li class="dropdown">
+                            <a href="index.html" style="color: black;">Home</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="about-us.html" style="color: black;">About Us</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: black;" onclick="return false;">Services</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="machine-vision.html">Machine Vision</a></li>
+                                <li><a href="robotics.html">Robotics</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="contact.html" style="color: black;">Contact Us</a>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div>
+        </nav>
+    </header>
+</div>
+<!-- End Unified Header Component -->
+
+<!-- Additional CSS for unified header -->
+<style>
+.unified-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.unified-header .top-bar-area {
+    position: relative;
+    z-index: 1001;
+}
+
+.unified-header .navbar {
+    position: relative;
+    z-index: 1000;
+    margin-bottom: 0;
+    border: none;
+}
+
+/* Adjust body padding to account for fixed header */
+body {
+    padding-top: 120px; /* Adjust based on header height */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body {
+        padding-top: 100px;
+    }
+}
+</style>
+
+<!-- JavaScript for unified header functionality -->
+<script>
+$(document).ready(function() {
+    // Ensure dropdown works when opening file directly
+    $('.dropdown-toggle').on('click', function(e) {
+        e.preventDefault();
+        var $dropdown = $(this).next('.dropdown-menu');
+        $('.dropdown-menu').not($dropdown).hide();
+        $dropdown.toggle();
+    });
+    
+    // Close dropdown when clicking outside
+    $(document).on('click', function(e) {
+        if (!$(e.target).closest('.dropdown').length) {
+            $('.dropdown-menu').hide();
+        }
+    });
+    
+    // Handle dropdown item clicks
+    $('.dropdown-menu a').on('click', function(e) {
+        e.stopPropagation();
+        window.location.href = $(this).attr('href');
+    });
+});
+</script>
