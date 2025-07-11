@@ -397,6 +397,161 @@
             scroll-behavior: smooth;
         }
 
+        /* Letter by letter animation for banner text */
+        .letter-animation {
+            display: inline-block;
+        }
+
+        .letter-animation .letter {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(30px) rotateX(90deg);
+            animation: letterFadeIn 0.8s ease-out forwards;
+        }
+
+        .letter-animation .letter.space {
+            width: 0.3em;
+        }
+
+        @keyframes letterFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px) rotateX(90deg) scale(0.8);
+            }
+            50% {
+                transform: translateY(-5px) rotateX(0deg) scale(1.05);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) rotateX(0deg) scale(1);
+            }
+        }
+
+        /* Add staggered delays for each letter */
+        .letter-animation .letter:nth-child(1) { animation-delay: 0.1s; }
+        .letter-animation .letter:nth-child(2) { animation-delay: 0.15s; }
+        .letter-animation .letter:nth-child(3) { animation-delay: 0.2s; }
+        .letter-animation .letter:nth-child(4) { animation-delay: 0.25s; }
+        .letter-animation .letter:nth-child(5) { animation-delay: 0.3s; }
+        .letter-animation .letter:nth-child(6) { animation-delay: 0.35s; }
+        .letter-animation .letter:nth-child(7) { animation-delay: 0.4s; }
+        .letter-animation .letter:nth-child(8) { animation-delay: 0.45s; }
+        .letter-animation .letter:nth-child(9) { animation-delay: 0.5s; }
+        .letter-animation .letter:nth-child(10) { animation-delay: 0.55s; }
+        .letter-animation .letter:nth-child(11) { animation-delay: 0.6s; }
+        .letter-animation .letter:nth-child(12) { animation-delay: 0.65s; }
+        .letter-animation .letter:nth-child(13) { animation-delay: 0.7s; }
+        .letter-animation .letter:nth-child(14) { animation-delay: 0.75s; }
+        .letter-animation .letter:nth-child(15) { animation-delay: 0.8s; }
+        .letter-animation .letter:nth-child(16) { animation-delay: 0.85s; }
+        .letter-animation .letter:nth-child(17) { animation-delay: 0.9s; }
+        .letter-animation .letter:nth-child(18) { animation-delay: 0.95s; }
+        .letter-animation .letter:nth-child(19) { animation-delay: 1s; }
+        .letter-animation .letter:nth-child(20) { animation-delay: 1.05s; }
+        .letter-animation .letter:nth-child(21) { animation-delay: 1.1s; }
+        .letter-animation .letter:nth-child(22) { animation-delay: 1.15s; }
+        .letter-animation .letter:nth-child(23) { animation-delay: 1.2s; }
+        .letter-animation .letter:nth-child(24) { animation-delay: 1.25s; }
+        .letter-animation .letter:nth-child(25) { animation-delay: 1.3s; }
+
+        /* Special styling for the strong part */
+        .letter-animation strong .letter {
+            color: #FF5E14;
+            font-weight: bold;
+        }
+
+        /* Enhanced effect for strong letters */
+        .letter-animation strong .letter {
+            animation: letterFadeInStrong 0.8s ease-out forwards;
+        }
+
+        @keyframes letterFadeInStrong {
+            0% {
+                opacity: 0;
+                transform: translateY(40px) rotateX(90deg) scale(0.7);
+                text-shadow: 0 0 0 transparent;
+            }
+            50% {
+                transform: translateY(-8px) rotateX(0deg) scale(1.1);
+                text-shadow: 0 0 15px rgba(255, 94, 20, 0.5);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) rotateX(0deg) scale(1);
+                text-shadow: 0 0 10px rgba(255, 94, 20, 0.3);
+            }
+        }
+
+        /* Split Text Layout Styles */
+        .banner-content-vertical {
+            width: 100% !important;
+            text-align: left;
+        }
+
+        .onetouch-controls-brand {
+            font-size: 2.5rem;
+            color: #FF5E14;
+            font-weight: 700;
+            margin: 0 0 20px 0;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: 2px;
+        }
+
+        .main-tagline {
+            font-size: 4rem;
+            margin: 0;
+            color: #ffffff;
+            line-height: 1.2;
+        }
+
+        .main-tagline strong .letter {
+            color: #c2d6ec;
+            font-weight: bold;
+        }
+
+        /* Responsive adjustments */
+        /* Responsive adjustments */
+        @media (max-width: 1200px) {
+            .onetouch-controls-brand {
+                font-size: 2.2rem;
+            }
+            .main-tagline {
+                font-size: 3.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .banner-content-vertical {
+                text-align: center;
+            }
+            .onetouch-controls-brand {
+                font-size: 1.8rem;
+                margin-bottom: 15px;
+            }
+            .main-tagline {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .onetouch-controls-brand {
+                font-size: 1.5rem;
+                letter-spacing: 1px;
+            }
+            .main-tagline {
+                font-size: 2.2rem;
+            }
+        }
+        /* Remove old split layout styles */
+        .text-layout,
+        .left-text,
+        .right-text,
+        .innovation-text,
+        .single-touch-text,
+        .onetouch-brand {
+            display: none;
+        }
+
     </style>
 
 </head>
@@ -488,10 +643,15 @@
                         <div class="box-cell">
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-lg-7 offset-lg-1">
-                                        <div class="content">
-                                            <h4 class="animated slideInLeft">Onetouch controls</h4>
-                                            <h2 data-animation="animated slideInDown">Innovation in<strong>Single Touch</strong></h2>
+                                    <div class="col-lg-12">
+                                        <div class="content banner-content-vertical">
+                                            <!-- Top: OneTouch Controls -->
+                                            <h3 class="onetouch-controls-brand animated slideInDown">OneTouch Controls</h3>
+                                            
+                                            <!-- Bottom: Innovation in Single Touch -->
+                                            <h2 class="letter-animation main-tagline" data-animation="animated slideInUp">
+                                                <span class="letter">I</span><span class="letter">n</span><span class="letter">n</span><span class="letter">o</span><span class="letter">v</span><span class="letter">a</span><span class="letter">t</span><span class="letter">i</span><span class="letter">o</span><span class="letter">n</span><span class="letter space"></span><span class="letter">i</span><span class="letter">n</span><span class="letter space"></span><strong><span class="letter">S</span><span class="letter">i</span><span class="letter">n</span><span class="letter">g</span><span class="letter">l</span><span class="letter">e</span><span class="letter space"></span><span class="letter">T</span><span class="letter">o</span><span class="letter">u</span><span class="letter">c</span><span class="letter">h</span></strong>
+                                            </h2>
                                             <!-- <p class="animated slideInRight">
                                                 Affixed pretend account ten natural. Need eat week even yet that. Incommode delighted he resolving sportsmen do in listening.
                                             </p> -->
