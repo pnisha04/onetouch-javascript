@@ -40,104 +40,76 @@
     <div class="se-pre-con"></div>
     <!-- Preloader Ends -->
 
-    <!-- Start Header Top 
-    ============================================= -->
-    <div class="top-bar-area bg-dark text-light">
-        <div class="container">
-            <div class="row align-center">
-                <div class="col-lg-3 shape">
-                    <ul class="social">
-                        <li class="facebook">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        </li>
-                        <li class="twitter">
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                        </li>
-                        <li class="pinterest">
-                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                        </li>
-                        <li class="linkedin">
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-9 info float-right text-right">
-                    <div class="info box">
-                        <ul class="list">
-                            <li>
-                                <i class="fas fa-map-marker-alt"></i>
-                                Navi Mumbai, India
-                            </li>
-                            <li>
-                                <i class="fas fa-envelope-open"></i>
-                                <a href="mailto:info@onetouchcontrols.in">info@onetouchcontrols.in</a>
-                            </li>
-                        </ul>
-                        
+    <!-- Raison-Inspired Header -->
+    <header class="raison-header">
+        <!-- Top Contact Bar -->
+        <div class="top-contact-bar">
+            <div class="container">
+                <div class="contact-info">
+                    <div class="contact-left">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@onetouchcontrols.in">info@onetouchcontrols.in</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Navi Mumbai, India</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Mon - Sat: 9:00 AM - 6:00 PM</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/company/onetouchcontrols/" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- End Header Top -->
 
-    <!-- Header 
-    ============================================= -->
-    <header id="home">
+        <!-- Main Navigation -->
+        <div class="main-navigation">
+            <div class="container">
+                <div class="nav-container">
+                    <!-- Logo Section -->
+                    <div class="logo-section">
+                        <a href="index.html">
+                            <img src="assets/img/onetouch-logo.png" alt="OneTouch Controls">
+                        </a>
+                    </div>
 
-        <!-- Start Navigation -->
-        <nav class="navbar navbar-default inc-top-bar navbar-fixed navbar-transparent white bootsnav" style="background-color: white;">
+                    <!-- Navigation Menu -->
+                    <nav>
+                        <ul class="nav-menu" id="nav-menu">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about-us.html">About Us</a></li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle">
+                                    Services <i class="fas fa-chevron-down"></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="machine-vision.html">Machine Vision</a></li>
+                                    <li><a href="robotics.html">Robotics</a></li>
+                                    <li><a href="plc-motion-controller.html">PLC/Motion Controller</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="contact.html" class="contact-btn">Contact Us</a></li>
+                        </ul>
 
-            <div class="container" >
-
-                <!-- Start Header Navigation -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-                        <i class="fa fa-bars"></i>
-                    </button>
-                    <a class="navbar-brand" href="index.html">
-                        <img src="assets/img/onetouch-logo.png" class="logo logo-display" alt="Logo">
-                        <img src="assets/img/onetouch-logo.png" class="logo logo-scrolled" alt="Logo">
-                    </a>
+                        <!-- Mobile Menu Toggle -->
+                        <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </nav>
                 </div>
-                <!-- End Header Navigation -->
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="navbar-menu" >
-                    <ul class="nav navbar-nav navbar-right" data-in="#" data-out="#">
-                        <li class="dropdown">
-                            <a href="index.html" style="color: black;">Home</a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="about-us.html" style="color: black;">About Us</a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="product-details.html" class="dropdown-toggle" data-toggle="dropdown" style="color: black;" role="button" aria-haspopup="true" aria-expanded="false">Services</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="control-panel.html">Control Panel</a></li>
-                                <li><a class="dropdown-item" href="encoder.html">Encoder</a></li>
-                                <li><a class="dropdown-item" href="HMI.html">HMI</a></li>
-                                <li><a class="dropdown-item" href="machine-vision.html">Machine Vision</a></li>
-                                <li><a class="dropdown-item" href="motion-controller.html">Motion Controller</a></li>
-                                <li><a class="dropdown-item" href="PLC.html">PLC</a></li>
-                                <li><a class="dropdown-item" href="power-supply.html">Power Supply</a></li>
-                                <li><a class="dropdown-item" href="servo.html">Servo</a></li>
-                                <li><a class="dropdown-item" href="VFD.html">VFD</a></li>
-
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="contact.html" style="color: black;">Contact Us</a>
-                        </li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
             </div>
-
-        </nav>
-        <!-- End Navigation -->
-
+        </div>
     </header>
-    <!-- End Header -->
+    <!-- End Raison-Inspired Header -->
 
     <!-- Start Breadcrumb 
     ============================================= -->

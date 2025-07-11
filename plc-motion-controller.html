@@ -15,7 +15,30 @@
     <link rel="shortcut icon" href="assets/img/onetouch-logo.png" type="image/x-icon">
     <!-- ========== Start Stylesheet ========== -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="assets/css/font-awesome.min.css" rel="s        .invt-section {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            padding: 50px 30px;
+            border-radius: 15px;
+            margin-bottom: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .invt-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(25, 118, 210, 0.05) 0%, transparent 50%);
+            z-index: 0;
+        }
+        
+        .invt-section > * {
+            position: relative;
+            z-index: 1;
+        }eet" />
     <link href="assets/css/icofont.min.css" rel="stylesheet" />
     <link href="assets/css/themify-icons.css" rel="stylesheet" />
     <link href="assets/css/flaticon-set.css" rel="stylesheet" />
@@ -28,133 +51,374 @@
     <link href="assets/css/responsive.css" rel="stylesheet" />
     <!-- ========== End Stylesheet ========== -->
 
-    <!-- Unified Header CSS -->
+    <!-- Raison-Inspired Header CSS -->
     <style>
-        .unified-header {
+        .raison-header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 1000;
+            background: #ffffff;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
         }
 
-        .unified-header .top-bar-area {
-            position: relative;
-            z-index: 1001;
-            background: rgba(0, 0, 0, 0.8) !important;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+        /* Top Contact Bar */
+        .top-contact-bar {
+            background: #2c3e50;
+            color: #ffffff;
+            padding: 8px 0;
+            font-size: 14px;
+            border-bottom: 3px solid #3498db;
         }
 
-        .unified-header .navbar {
-            position: relative;
-            z-index: 1000;
-            margin-bottom: 0;
-            border: none;
-            background: rgba(255, 255, 255, 0.95) !important;
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        .top-contact-bar .contact-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
-        .unified-header .navbar.scrolled {
-            background: rgba(255, 255, 255, 0.98) !important;
-            box-shadow: 0 2px 25px rgba(0, 0, 0, 0.15);
+        .top-contact-bar .contact-left {
+            display: flex;
+            align-items: center;
+            gap: 30px;
         }
 
-        .unified-header .navbar-brand img {
+        .top-contact-bar .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #ecf0f1;
+        }
+
+        .top-contact-bar .contact-item i {
+            color: #3498db;
+            font-size: 16px;
+        }
+
+        .top-contact-bar .contact-item a {
+            color: #ecf0f1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .top-contact-bar .contact-item a:hover {
+            color: #3498db;
+        }
+
+        .top-contact-bar .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .top-contact-bar .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            background: rgba(52, 152, 219, 0.2);
+            border-radius: 50%;
+            color: #3498db;
+            text-decoration: none;
             transition: all 0.3s ease;
-            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
         }
 
-        .unified-header .navbar-nav > li > a {
-            color: #333 !important;
-            font-weight: 500;
+        .top-contact-bar .social-links a:hover {
+            background: #3498db;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        /* Main Navigation */
+        .main-navigation {
+            background: #ffffff;
+            padding: 2px 0;
+            transition: all 0.3s ease;
+        }
+
+        .raison-header.scrolled .main-navigation {
+            padding: 10px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Logo Styling */
+        .logo-section {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-section img {
+            height: 60px;
+            width: auto;
+            transition: all 0.3s ease;
+        }
+
+        .raison-header.scrolled .logo-section img {
+            height: 50px;
+        }
+
+        .company-tagline {
+            margin-left: 15px;
+            color: #2c3e50;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            line-height: 1.2;
+            max-width: 200px;
+        }
+
+        /* Navigation Menu */
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 5px;
+        }
+
+        .nav-menu > li {
+            position: relative;
+        }
+
+        .nav-menu > li > a {
+            display: block;
+            padding: 12px 18px;
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
             transition: all 0.3s ease;
             position: relative;
         }
 
-        .unified-header .navbar-nav > li > a:hover {
-            color: #007bff !important;
-            transform: translateY(-1px);
+        .nav-menu > li > a:hover,
+        .nav-menu > li.active > a {
+            color: #3498db;
         }
 
-        .unified-header .navbar-nav > li > a::after {
+        .nav-menu > li > a::after {
             content: '';
             position: absolute;
+            width: 0;
+            height: 3px;
             bottom: 0;
             left: 50%;
-            width: 0;
-            height: 2px;
-            background: #007bff;
+            background: #3498db;
             transition: all 0.3s ease;
             transform: translateX(-50%);
         }
 
-        .unified-header .navbar-nav > li > a:hover::after,
-        .unified-header .navbar-nav > li.active > a::after {
-            width: 100%;
+        .nav-menu > li > a:hover::after,
+        .nav-menu > li.active > a::after {
+            width: 80%;
         }
 
-        .unified-header .dropdown-menu {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
+        /* Dropdown Styling */
+        .nav-menu .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 220px;
+            background: #ffffff;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
             border: none;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-            margin-top: 10px;
-        }
-
-        .unified-header .dropdown-menu a {
-            color: #333 !important;
+            border-radius: 8px;
+            padding: 10px 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
             transition: all 0.3s ease;
-            padding: 12px 20px;
+            z-index: 1000;
         }
 
-        .unified-header .dropdown-menu a:hover {
-            background: rgba(0, 123, 255, 0.1) !important;
-            color: #007bff !important;
+        .nav-menu .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .nav-menu .dropdown-menu li a {
+            display: block;
+            padding: 12px 20px;
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 500;
+            text-transform: none;
+            letter-spacing: normal;
+            transition: all 0.3s ease;
+        }
+
+        .nav-menu .dropdown-menu li a:hover {
+            background: #3498db;
+            color: #ffffff;
             transform: translateX(5px);
         }
 
-        /* Adjust body padding to account for fixed header */
+        /* Contact Button */
+        .contact-btn {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: #ffffff !important;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        .contact-btn:hover {
+            background: linear-gradient(135deg, #2980b9, #3498db);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+            color: #ffffff !important;
+        }
+
+        /* Mobile Menu Toggle */
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            background: none;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        .mobile-menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: #2c3e50;
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        /* Adjust body padding */
         body.it-solution {
-            padding-top: 120px;
+            padding-top: 110px;
         }
 
-        /* Add a subtle animation on page load */
-        .unified-header {
-            animation: slideDown 0.8s ease-out;
-        }
-
-        @keyframes slideDown {
-            from {
-                transform: translateY(-100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            body.it-solution {
-                padding-top: 100px;
+        /* Responsive Design */
+        @media (max-width: 991px) {
+            .company-tagline {
+                display: none;
             }
             
-            .unified-header .navbar-collapse {
-                background: rgba(255, 255, 255, 0.98);
-                backdrop-filter: blur(15px);
-                -webkit-backdrop-filter: blur(15px);
-                border-radius: 10px;
-                margin-top: 10px;
-                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #ffffff;
+                flex-direction: column;
+                box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+                padding: 20px;
+                gap: 0;
+            }
+            
+            .nav-menu.active {
+                display: flex;
+            }
+            
+            .nav-menu > li {
+                width: 100%;
+                border-bottom: 1px solid #ecf0f1;
+            }
+            
+            .nav-menu > li > a {
+                padding: 15px 0;
+                border-bottom: none;
+            }
+            
+            .mobile-menu-toggle {
+                display: flex;
+            }
+            
+            .contact-btn {
+                margin-top: 15px;
+                text-align: center;
+            }
+            
+            .nav-menu .dropdown-menu {
+                position: static;
+                box-shadow: none;
+                background: #f8f9fa;
+                margin: 10px 0;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
             }
         }
+
+        @media (max-width: 768px) {
+            .top-contact-bar {
+                font-size: 12px;
+                padding: 5px 0;
+            }
+            
+            .top-contact-bar .contact-left {
+                gap: 15px;
+            }
+            
+            .company-tagline {
+                display: none;
+            }
+            
+            .logo-section img {
+                height: 50px;
+            }
+            
+            body.it-solution {
+                padding-top: 90px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .top-contact-bar .contact-left {
+                flex-direction: column;
+                gap: 5px;
+            }
+            
+            .top-contact-bar .social-links {
+                gap: 10px;
+            }
+            
+            .logo-section img {
+                height: 45px;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
     </style>
 </head>
 
@@ -164,96 +428,78 @@
     <div class="se-pre-con"></div>
     <!-- Preloader Ends -->
 
-    <!-- Unified Header Component -->
-    <div class="unified-header">
-        <!-- Top Bar with Social Links and Contact Info -->
-        <div class="top-bar-area bg-dark text-light">
+    <!-- Raison-Inspired Header -->
+    <header class="raison-header">
+        <!-- Top Contact Bar -->
+        <div class="top-contact-bar">
             <div class="container">
-                <div class="row align-center">
-                    <div class="col-lg-3 shape">
-                        <ul class="social">
-                            <li class="linkedin">
-                                <a href="https://www.linkedin.com/company/onetouchcontrols/"><i class="fab fa-linkedin-in"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-9 info float-right text-right">
-                        <div class="info box">
-                            <ul class="list">
-                                <li>
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    Navi Mumbai, India
-                                </li>
-                                <li>
-                                    <i class="fas fa-envelope-open"></i>
-                                    <a href="mailto:info@onetouchcontrols.in">info@onetouchcontrols.in</a>
-                                </li>
-                            </ul>
+                <div class="contact-info">
+                    <div class="contact-left">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@onetouchcontrols.in">info@onetouchcontrols.in</a>
                         </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Navi Mumbai, India</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Mon - Sat: 9:00 AM - 6:00 PM</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/company/onetouchcontrols/" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <!-- Main Navigation -->
-        <header id="home">
-            <nav class="navbar navbar-default inc-top-bar navbar-fixed navbar-transparent white bootsnav" style="background-color: white;">
-                <div class="container">
-                    <!-- Start Header Navigation -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-                            <i class="fa fa-bars"></i>
-                        </button>
-                        <a class="navbar-brand" href="index.html">
-                            <img src="assets/img/onetouch-logo.png" class="logo logo-display" alt="Logo">
-                            <img src="assets/img/onetouch-logo.png" class="logo logo-scrolled" alt="Logo">
+        <div class="main-navigation">
+            <div class="container">
+                <div class="nav-container">
+                    <!-- Logo Section -->
+                    <div class="logo-section">
+                        <a href="index.html">
+                            <img src="assets/img/onetouch-logo.png" alt="OneTouch Controls">
                         </a>
                     </div>
-                    <!-- End Header Navigation -->
 
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="navbar-menu">
-                        <ul class="nav navbar-nav navbar-right" data-in="#" data-out="#">
-                            <li class="dropdown">
-                                <a href="index.html" style="color: black;">Home</a>
-                            </li>
-                            <li class="dropdown">
-                                <a href="about-us.html" style="color: black;">About Us</a>
-                            </li>
+                    <!-- Navigation Menu -->
+                    <nav>
+                        <ul class="nav-menu" id="nav-menu">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about-us.html">About Us</a></li>
                             <li class="dropdown active">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: black;" onclick="return false;">Services</a>
+                                <a href="#" class="dropdown-toggle">
+                                    Services <i class="fas fa-chevron-down"></i>
+                                </a>
                                 <ul class="dropdown-menu">
                                     <li><a href="machine-vision.html">Machine Vision</a></li>
                                     <li><a href="robotics.html">Robotics</a></li>
                                     <li><a href="plc-motion-controller.html">PLC/Motion Controller</a></li>
                                 </ul>
                             </li>
-                            <li>
-                                <a href="contact.html" style="color: black;">Contact Us</a>
-                            </li>
+                            <li><a href="contact.html" class="contact-btn">Contact Us</a></li>
                         </ul>
-                    </div><!-- /.navbar-collapse -->
-                </div>
-            </nav>
-        </header>
-    </div>
-    <!-- End Unified Header Component -->
 
-    <!-- Start Page Title -->
-    <div class="breadcrumb-area gradient-bg bg-cover shadow dark text-light text-center" style="background-image: url(assets/img/2440x1578.png);">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2">
-                    <h1>PLC & Motion Controller</h1>
-                    <ul class="breadcrumb">
-                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li class="active">PLC & Motion Controller</li>
-                    </ul>
+                        <!-- Mobile Menu Toggle -->
+                        <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </nav>
                 </div>
             </div>
         </div>
-    </div>
+    </header>
+    <!-- End Raison-Inspired Header -->
+
+
     <!-- End Page Title -->
 
     <!-- Start PLC & Motion Controller Area -->
@@ -326,26 +572,30 @@
                             <div class="row invt-products">
                                 <!-- Product 1 - Originally 3rd image and name -->
                                 <div class="col-lg-4 col-md-4 mb-4">
-                                    <div class="invt-product-card-small">
-                                        <div class="product-image">
-                                            <img src="assets/img/plc/65d3ff85b2bf6.jpg" alt="INVT HMI Touch Panel" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px;">
+                                    <a href="ts600-intelligent-plc.html" style="text-decoration: none; color: inherit;">
+                                        <div class="invt-product-card-small" style="cursor: pointer;">
+                                            <div class="product-image">
+                                                <img src="assets/img/plc/invt/65d3ff85b2bf6.jpg" alt="INVT TS600 Series PLC" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px;">
+                                            </div>
+                                            <div class="product-info">
+                                            <h4>TS600 Series Intelligent PLC</h4>
+                                            </div>
                                         </div>
-                                        <div class="product-info">
-                                            <h4>VA Series HMI Touch Panel</h4>
-                                        </div>
-                                    </div>
+                                    </a>
                                 </div>
 
                                 <!-- Product 2 - Originally 4th image and name -->
                                 <div class="col-lg-4 col-md-4 mb-4">
-                                    <div class="invt-product-card-small">
-                                        <div class="product-image">
-                                            <img src="assets/img/plc/669757afba08e.jpg" alt="INVT Compact PLC" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px;">
+                                    <a href="tm700-motion-controller.html" style="text-decoration: none; color: inherit;">
+                                        <div class="invt-product-card-small" style="cursor: pointer;">
+                                            <div class="product-image">
+                                                <img src="assets/img/plc/invt/invt_2/669757afba08e.jpg" alt="INVT TM700 Motion Controller" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px;">
+                                            </div>
+                                            <div class="product-info">
+                                                <h4>TM700 Series Motion Controller</h4>
+                                            </div>
                                         </div>
-                                        <div class="product-info">
-                                            <h4>IVC1L Series Compact PLC</h4>
-                                        </div>
-                                    </div>
+                                    </a>
                                 </div>
 
                                 <!-- Product 3 - Originally 1st image and name -->
@@ -355,7 +605,7 @@
                                             <img src="assets/img/plc/5f990feb792c2.jpg" alt="INVT PLC Series" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px;">
                                         </div>
                                         <div class="product-info">
-                                            <h4>TS600 Series Intelligent PLC</h4>
+                                            <h4>IVC1L Series Compact PLC</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -367,7 +617,7 @@
                                             <img src="assets/img/plc/6507fd19622a1.jpg" alt="INVT Motion Controller" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px;">
                                         </div>
                                         <div class="product-info">
-                                            <h4>TM700 Series Motion Controller</h4>
+                                            <h4>Flex Series I/O System</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -380,6 +630,107 @@
                                         </div>
                                         <div class="product-info">
                                             <h4>AX PLC Motion Controller</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Delta Product Series Section -->
+                        <div class="delta-section">
+                            <h2 style="text-align: center; margin-bottom: 50px; color: #333;">Delta Product Series</h2>
+                            
+                            <div class="row delta-products">
+                                <!-- Product 1 - DVP Series Slim CPU -->
+                                <div class="col-lg-3 col-md-6 mb-4">
+                                    <div class="delta-product-card">
+                                        <div class="product-image">
+                                            <img src="assets/img/delta/1ts_img.jpeg" alt="DVP Series Slim CPU" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px;">
+                                        </div>
+                                        <div class="product-info">
+                                            <h4>DVP Series Slim CPU</h4>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Product 2 - AS Series Compact Modular PLC -->
+                                <div class="col-lg-3 col-md-6 mb-4">
+                                    <div class="delta-product-card">
+                                        <div class="product-image">
+                                            <img src="assets/img/delta/2nd_img.png" alt="AS Series Compact Modular PLC" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px;">
+                                        </div>
+                                        <div class="product-info">
+                                            <h4>AS Series Compact Modular PLC</h4>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Product 3 - AH Series Hot Swappable PLC -->
+                                <div class="col-lg-3 col-md-6 mb-4">
+                                    <div class="delta-product-card">
+                                        <div class="product-image">
+                                            <img src="assets/img/DELTA.jpg" alt="AH Series Hot Swappable PLC" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px;">
+                                        </div>
+                                        <div class="product-info">
+                                            <h4>AH Series Hot Swappable PLC</h4>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Product 4 - AX-5 Advanced Modular PLC -->
+                                <div class="col-lg-3 col-md-6 mb-4">
+                                    <div class="delta-product-card">
+                                        <div class="product-image">
+                                            <img src="assets/img/delta-plc.jpg" alt="AX-5 Advanced Modular PLC" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px;">
+                                        </div>
+                                        <div class="product-info">
+                                            <h4>AX-5 Advanced Modular PLC</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Siemens Product Series Section -->
+                        <div class="siemens-section">
+                            <h2 style="text-align: center; margin-bottom: 50px; color: #333;">Siemens Product Series</h2>
+                            
+                            <div class="row siemens-products">
+                                <!-- Product 1 - S7-200 SMART CPU SR Series -->
+                                <div class="col-lg-4 col-md-6 mb-4">
+                                    <div class="siemens-product-card">
+                                        <div class="product-image">
+                                            <img src="assets/img/scheinder-plc.jpg" alt="S7-200 SMART CPU SR Series" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px;">
+                                        </div>
+                                        <div class="product-info">
+                                            <h4>S7-200 SMART CPU SR Series</h4>
+                                            <p>Relay output, AC/DC power supply with 12-36 DI/DO points for small automation tasks.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Product 2 - S7-200 SMART CPU ST Series -->
+                                <div class="col-lg-4 col-md-6 mb-4">
+                                    <div class="siemens-product-card">
+                                        <div class="product-image">
+                                            <img src="assets/img/electrical-control-panel-board.jpg" alt="S7-200 SMART CPU ST Series" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px;">
+                                        </div>
+                                        <div class="product-info">
+                                            <h4>S7-200 SMART CPU ST Series</h4>
+                                            <p>Transistor output, DC power supply with built-in Ethernet connectivity and expandable I/O.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Product 3 - S7-200 SMART Expansion Modules -->
+                                <div class="col-lg-4 col-md-6 mb-4">
+                                    <div class="siemens-product-card">
+                                        <div class="product-image">
+                                            <img src="assets/img/Mitsubishi-PLC-Programming-Tutorials.png" alt="S7-200 SMART Expansion Modules" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px;">
+                                        </div>
+                                        <div class="product-info">
+                                            <h4>S7-200 SMART Expansion Modules</h4>
+                                            <p>Digital I/O, Analog I/O, and Communication modules for flexible system expansion.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -483,10 +834,28 @@
     <script src="assets/js/bootsnav.js"></script>
     <script src="assets/js/main.js"></script>
 
-    <!-- Additional JavaScript for dropdown functionality and header effects -->
+    <!-- JavaScript for Raison-Inspired Header -->
     <script>
         $(document).ready(function() {
-            // Ensure dropdown works when opening file directly
+            // Mobile menu toggle
+            $('#mobile-menu-toggle').on('click', function() {
+                $('#nav-menu').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+
+            // Header scroll effect
+            $(window).scroll(function() {
+                var scrollTop = $(window).scrollTop();
+                var $header = $('.raison-header');
+                
+                if (scrollTop > 50) {
+                    $header.addClass('scrolled');
+                } else {
+                    $header.removeClass('scrolled');
+                }
+            });
+
+            // Dropdown functionality
             $('.dropdown-toggle').on('click', function(e) {
                 e.preventDefault();
                 var $dropdown = $(this).next('.dropdown-menu');
@@ -507,26 +876,39 @@
                 window.location.href = $(this).attr('href');
             });
 
-            // Header scroll effect
-            $(window).scroll(function() {
-                var scrollTop = $(window).scrollTop();
-                var navbar = $('.unified-header .navbar');
+            // Smooth scrolling for anchor links
+            $('a[href^="#"]').on('click', function(e) {
+                e.preventDefault();
+                var target = this.hash;
+                var $target = $(target);
                 
-                if (scrollTop > 50) {
-                    navbar.addClass('scrolled');
-                } else {
-                    navbar.removeClass('scrolled');
+                if ($target.length) {
+                    $('html, body').animate({
+                        'scrollTop': $target.offset().top - 110
+                    }, 800, 'swing');
                 }
             });
 
-            // Smooth scrolling for anchor links
-            $('a[href^="#"]').on('click', function(event) {
-                var target = $(this.getAttribute('href'));
-                if (target.length) {
-                    event.preventDefault();
-                    $('html, body').stop().animate({
-                        scrollTop: target.offset().top - 120
-                    }, 1000);
+            // Add active state to current page navigation
+            var currentPage = window.location.pathname.split('/').pop();
+            $('.nav-menu li a').each(function() {
+                var href = $(this).attr('href');
+                if (href === currentPage) {
+                    $(this).closest('li').addClass('active').siblings().removeClass('active');
+                }
+            });
+
+            // Close mobile menu when clicking on a link
+            $('.nav-menu a').on('click', function() {
+                $('#nav-menu').removeClass('active');
+                $('#mobile-menu-toggle').removeClass('active');
+            });
+
+            // Handle window resize
+            $(window).resize(function() {
+                if ($(window).width() > 991) {
+                    $('#nav-menu').removeClass('active');
+                    $('#mobile-menu-toggle').removeClass('active');
                 }
             });
         });
@@ -663,6 +1045,136 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 2px;
+            color: #1976d2;
+        }
+        
+        .delta-section {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffcc80 100%);
+            padding: 50px 30px;
+            border-radius: 15px;
+            margin-bottom: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .delta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 152, 0, 0.08) 0%, transparent 50%);
+            z-index: 0;
+        }
+        
+        .delta-section > * {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .delta-section h2 {
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ef6c00;
+        }
+        
+        .delta-product-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 20px;
+            height: 100%;
+            transition: all 0.3s ease;
+            text-align: center;
+            border: 2px solid transparent;
+        }
+        
+        .delta-product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(230, 81, 0, 0.2);
+            border-color: #e65100;
+        }
+        
+        .delta-product-card .product-image {
+            margin-bottom: 15px;
+        }
+        
+        .delta-product-card h4 {
+            color: #e65100;
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 0;
+            line-height: 1.4;
+        }
+        
+        .siemens-section {
+            background: linear-gradient(135deg, #f3e5f5 0%, #ce93d8 100%);
+            padding: 50px 30px;
+            border-radius: 15px;
+            margin-bottom: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .siemens-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(156, 39, 176, 0.08) 0%, transparent 50%);
+            z-index: 0;
+        }
+        
+        .siemens-section > * {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .siemens-section h2 {
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #7b1fa2;
+        }
+        
+        .siemens-product-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 20px;
+            height: 100%;
+            transition: all 0.3s ease;
+            text-align: center;
+            border: 2px solid transparent;
+        }
+        
+        .siemens-product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(123, 31, 162, 0.2);
+            border-color: #7b1fa2;
+        }
+        
+        .siemens-product-card .product-image {
+            margin-bottom: 15px;
+        }
+        
+        .siemens-product-card h4 {
+            color: #7b1fa2;
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+        
+        .siemens-product-card p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+            margin: 0;
         }
     </style>
 

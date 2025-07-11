@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PLC & Motion Controller - One Touch Controls</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #333;
+            text-align: center;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            border: 1px solid #e9ecef;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .product-card h3 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+        .product-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        .product-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .product-link:hover {
+            background-color: #0056b3;
+            text-decoration: none;
+            color: white;
+        }
+        .js-nav-button {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 14px;
+        }
+        .js-nav-button:hover {
+            background-color: #0056b3;
+        }
+        .js-nav-button.success {
+            background-color: #28a745;
+        }
+        .js-nav-button.success:hover {
+            background-color: #1e7e34;
+        }
+        .section-title {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 30px 0 20px 0;
+        }
+        .nav-bar {
+            background-color: #343a40;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .nav-bar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .nav-bar a:hover {
+            background-color: #495057;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-bar">
+            <a href="index.html">Home</a>
+            <a href="about-us.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="test.html">Test Page</a>
+        </div>
+        
+        <h1>PLC & Motion Controller Systems</h1>
+        
+        <p style="text-align: center; font-size: 18px; color: #666; margin-bottom: 40px;">
+            Advanced automation solutions for industrial applications with reliable performance and flexible configuration.
+        </p>
+        
+        <div class="section-title">
+            <h2>INVT Product Series</h2>
+        </div>
+        
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="assets/img/plc/invt/65d3ff85b2bf6.jpg" alt="INVT TS600 Series PLC" onerror="this.src='assets/img/placeholder.jpg'">
+                <h3>TS600 Series Intelligent PLC</h3>
+                <p>High-performance embedded technology solution designed for intelligent automation applications.</p>
+                <a href="ts600-intelligent-plc.html" class="product-link">View Details</a>
+            </div>
+            
+            <div class="product-card">
+                <img src="assets/img/plc/invt/invt_2/669757afba08e.jpg" alt="INVT TM700 Motion Controller" onerror="this.src='assets/img/placeholder.jpg'">
+                <h3>TM700 Series Motion Controller</h3>
+                <p>High-performance programmable controller designed for motion control requirements and complex networks.</p>
+                <a href="tm700-motion-controller.html" class="product-link">View Details</a>
+                <button class="js-nav-button success" onclick="window.location.href='tm700-simple.html'">Simple View</button>
+                <button class="js-nav-button" onclick="window.open('tm700-motion-controller.html', '_blank')">Open in New Window</button>
+            </div>
+            
+            <div class="product-card">
+                <img src="assets/img/plc/5f990feb792c2.jpg" alt="INVT IVC1L Series" onerror="this.src='assets/img/placeholder.jpg'">
+                <h3>IVC1L Series Compact PLC</h3>
+                <p>Cost-effective compact solution for small to medium automation applications.</p>
+                <a href="#" class="product-link" style="background-color: #6c757d;">Coming Soon</a>
+            </div>
+        </div>
+        
+        <div class="section-title">
+            <h2>Key Features</h2>
+        </div>
+        
+        <div class="product-grid">
+            <div class="product-card">
+                <h3>🔧 High Performance</h3>
+                <p>Advanced processing capabilities with fast execution speeds and reliable operation in industrial environments.</p>
+            </div>
+            
+            <div class="product-card">
+                <h3>🌐 Connectivity</h3>
+                <p>Multiple communication protocols including EtherCAT, ModbusTCP, TCP/IP, and more for seamless integration.</p>
+            </div>
+            
+            <div class="product-card">
+                <h3>💻 Easy Programming</h3>
+                <p>User-friendly programming environment with comprehensive development tools and debugging capabilities.</p>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px; padding: 20px; background-color: #f8f9fa; border-radius: 8px;">
+            <h3>Need Help?</h3>
+            <p>If navigation doesn't work, try right-clicking links and selecting "Open in new tab" or copy the link address.</p>
+            <p>For better experience, consider using a local web server or hosting the files online.</p>
+        </div>
+    </div>
+</body>
+</html>

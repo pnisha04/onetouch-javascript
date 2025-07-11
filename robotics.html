@@ -27,6 +27,7 @@
     <link href="style.css" rel="stylesheet">
     <link href="assets/css/responsive.css" rel="stylesheet" />
     <!-- ========== End Stylesheet ========== -->
+
 </head>
 
 <body class="it-solution">
@@ -35,89 +36,74 @@
     <div class="se-pre-con"></div>
     <!-- Preloader Ends -->
 
-    <!-- Start Header Top -->
-    <div class="top-bar-area bg-dark text-light">
-        <div class="container">
-            <div class="row align-center">
-                <div class="col-lg-3 shape">
-                    <ul class="social">
-                        <li class="facebook">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        </li>
-                        <li class="twitter">
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                        </li>
-                        <li class="pinterest">
-                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                        </li>
-                        <li class="linkedin">
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-9 info float-right text-right">
-                    <div class="info box">
-                        <ul class="list">
-                            <li>
-                                <i class="fas fa-map-marker-alt"></i>
-                                Navi Mumbai, India
-                            </li>
-                            <li>
-                                <i class="fas fa-envelope-open"></i>
-                                <a href="mailto:info@onetouchcontrols.in">info@onetouchcontrols.in</a>
-                            </li>
-                        </ul>
+    <!-- Raison-Inspired Header -->
+    <header class="raison-header">
+        <!-- Top Contact Bar -->
+        <div class="top-contact-bar">
+            <div class="container">
+                <div class="contact-info">
+                    <div class="contact-left">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@onetouchcontrols.in">info@onetouchcontrols.in</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Navi Mumbai, India</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Mon - Sat: 9:00 AM - 6:00 PM</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/company/onetouchcontrols/" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- End Header Top -->
 
-    <!-- Header -->
-    <header id="home">
-        <!-- Start Navigation -->
-        <nav class="navbar navbar-default inc-top-bar navbar-fixed navbar-transparent white bootsnav" style="background-color: white;">
+        <!-- Main Navigation -->
+        <div class="main-navigation">
             <div class="container">
-                <!-- Start Header Navigation -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-                        <i class="fa fa-bars"></i>
-                    </button>
-                    <a class="navbar-brand" href="index.html">
-                        <img src="assets/img/onetouch-logo.png" class="logo logo-display" alt="Logo">
-                        <img src="assets/img/onetouch-logo.png" class="logo logo-scrolled" alt="Logo">
-                    </a>
-                </div>
-                <!-- End Header Navigation -->
+                <div class="nav-container">
+                    <!-- Logo Section -->
+                    <div class="logo-section">
+                        <a href="index.html">
+                            <img src="assets/img/onetouch-logo.png" alt="OneTouch Controls">
+                        </a>
+                    </div>
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="navbar-menu">
-                    <ul class="nav navbar-nav navbar-right" data-in="#" data-out="#">
-                        <li class="dropdown">
-                            <a href="index.html" style="color: black;">Home</a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="about-us.html" style="color: black;">About Us</a>
-                        </li>
-                        <li class="dropdown active">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: black;" onclick="return false;">Services</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="machine-vision.html">Machine Vision</a></li>
-                                <li><a href="robotics.html">Robotics</a></li>
-                                <li><a href="plc-motion-controller.html">PLC/Motion Controller</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="contact.html" style="color: black;">Contact Us</a>
-                        </li>
-                    </ul>
+                    <!-- Navigation Menu -->
+                    <nav>
+                        <ul class="nav-menu" id="nav-menu">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about-us.html">About Us</a></li>
+                            <li class="dropdown active">
+                               <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: black;" onclick="return false;">Services</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="machine-vision.html">Machine Vision</a></li>
+                                    <li><a href="robotics.html">Robotics</a></li>
+                                    <li><a href="plc-motion-controller.html">PLC/Motion Controller</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="contact.html" class="contact-btn">Contact Us</a></li>
+                        </ul>
+
+                        <!-- Mobile Menu Toggle -->
+                        <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </nav>
                 </div>
             </div>
-        </nav>
-        <!-- End Navigation -->
+        </div>
     </header>
-    <!-- End Header -->
+    <!-- End Raison-Inspired Header -->
 
     <!-- Start Robotics Area -->
     <div class="services-details-area default-padding">
@@ -236,7 +222,7 @@
                         <div class="robot-section" style="margin-top: 50px;">
                             <h3>Robot Applications</h3>
                             <div class="row">
-                                <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="col-lg-3 col-md-6 mb-4">
                                     <div class="application-item">
                                         <div class="application-icon">
                                             <i class="fas fa-industry" style="font-size: 40px; color: #007bff;"></i>
@@ -245,7 +231,7 @@
                                         <p>Automated assembly, welding, painting, and quality control in manufacturing environments.</p>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="col-lg-3 col-md-6 mb-4">
                                     <div class="application-item">
                                         <div class="application-icon">
                                             <i class="fas fa-boxes" style="font-size: 40px; color: #007bff;"></i>
@@ -254,7 +240,7 @@
                                         <p>Material handling, packaging, sorting, and warehouse automation solutions.</p>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="col-lg-3 col-md-6 mb-4">
                                     <div class="application-item">
                                         <div class="application-icon">
                                             <i class="fas fa-car" style="font-size: 40px; color: #007bff;"></i>
@@ -263,7 +249,7 @@
                                         <p>Body welding, painting, assembly, and quality inspection in automotive production.</p>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="col-lg-3 col-md-6 mb-4">
                                     <div class="application-item">
                                         <div class="application-icon">
                                             <i class="fas fa-pills" style="font-size: 40px; color: #007bff;"></i>
@@ -272,7 +258,9 @@
                                         <p>Sterile handling, packaging, and quality control in pharmaceutical manufacturing.</p>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 mb-4">
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-3 col-md-6 mb-4">
                                     <div class="application-item">
                                         <div class="application-icon">
                                             <i class="fas fa-utensils" style="font-size: 40px; color: #007bff;"></i>
@@ -281,7 +269,7 @@
                                         <p>Food processing, packaging, and handling in hygienic environments.</p>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="col-lg-3 col-md-6 mb-4">
                                     <div class="application-item">
                                         <div class="application-icon">
                                             <i class="fas fa-microchip" style="font-size: 40px; color: #007bff;"></i>

@@ -28,40 +28,375 @@
     <link href="assets/css/responsive.css" rel="stylesheet" />
     <!-- ========== End Stylesheet ========== -->
 
-    <!-- Unified Header CSS -->
+    <!-- Raison-Inspired Header CSS -->
     <style>
-        .unified-header {
+        .raison-header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background: #ffffff;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
         }
 
-        .unified-header .top-bar-area {
-            position: relative;
-            z-index: 1001;
+        /* Top Contact Bar */
+        .top-contact-bar {
+            background: #2c3e50;
+            color: #ffffff;
+            padding: 8px 0;
+            font-size: 14px;
+            border-bottom: 3px solid #3498db;
         }
 
-        .unified-header .navbar {
+        .top-contact-bar .contact-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .top-contact-bar .contact-left {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .top-contact-bar .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #ecf0f1;
+        }
+
+        .top-contact-bar .contact-item i {
+            color: #3498db;
+            font-size: 16px;
+        }
+
+        .top-contact-bar .contact-item a {
+            color: #ecf0f1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .top-contact-bar .contact-item a:hover {
+            color: #3498db;
+        }
+
+        .top-contact-bar .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .top-contact-bar .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            background: rgba(52, 152, 219, 0.2);
+            border-radius: 50%;
+            color: #3498db;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .top-contact-bar .social-links a:hover {
+            background: #3498db;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        /* Main Navigation */
+        .main-navigation {
+            background: #ffffff;
+            padding: 2px 0;
+            transition: all 0.3s ease;
+        }
+
+        .raison-header.scrolled .main-navigation {
+            padding: 10px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Logo Styling */
+        .logo-section {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-section img {
+            height: 60px;
+            width: auto;
+            transition: all 0.3s ease;
+        }
+
+        .raison-header.scrolled .logo-section img {
+            height: 50px;
+        }
+
+        .company-tagline {
+            margin-left: 15px;
+            color: #2c3e50;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            line-height: 1.2;
+            max-width: 200px;
+        }
+
+        /* Navigation Menu */
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 5px;
+        }
+
+        .nav-menu > li {
             position: relative;
-            z-index: 1000;
-            margin-bottom: 0;
+        }
+
+        .nav-menu > li > a {
+            display: block;
+            padding: 12px 18px;
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-menu > li > a:hover,
+        .nav-menu > li.active > a {
+            color: #3498db;
+        }
+
+        .nav-menu > li > a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: 0;
+            left: 50%;
+            background: #3498db;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-menu > li > a:hover::after,
+        .nav-menu > li.active > a::after {
+            width: 80%;
+        }
+
+        /* Dropdown Styling */
+        .nav-menu .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 220px;
+            background: #ffffff;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
             border: none;
+            border-radius: 8px;
+            padding: 10px 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
         }
 
-        /* Adjust body padding to account for fixed header */
+        .nav-menu .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .nav-menu .dropdown-menu li a {
+            display: block;
+            padding: 12px 20px;
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 500;
+            text-transform: none;
+            letter-spacing: normal;
+            transition: all 0.3s ease;
+        }
+
+        .nav-menu .dropdown-menu li a:hover {
+            background: #3498db;
+            color: #ffffff;
+            transform: translateX(5px);
+        }
+
+        /* Contact Button */
+        .contact-btn {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: #ffffff !important;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        .contact-btn:hover {
+            background: linear-gradient(135deg, #2980b9, #3498db);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+            color: #ffffff !important;
+        }
+
+        /* Mobile Menu Toggle */
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            background: none;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        .mobile-menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: #2c3e50;
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        /* Adjust body padding */
         body.it-solution {
-            padding-top: 120px; /* Adjust based on header height */
+            padding-top: 110px;
         }
 
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            body.it-solution {
-                padding-top: 100px;
+        /* Responsive Design */
+        @media (max-width: 991px) {
+            .company-tagline {
+                display: none;
+            }
+            
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #ffffff;
+                flex-direction: column;
+                box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+                padding: 20px;
+                gap: 0;
+            }
+            
+            .nav-menu.active {
+                display: flex;
+            }
+            
+            .nav-menu > li {
+                width: 100%;
+                border-bottom: 1px solid #ecf0f1;
+            }
+            
+            .nav-menu > li > a {
+                padding: 15px 0;
+                border-bottom: none;
+            }
+            
+            .mobile-menu-toggle {
+                display: flex;
+            }
+            
+            .contact-btn {
+                margin-top: 15px;
+                text-align: center;
+            }
+            
+            .nav-menu .dropdown-menu {
+                position: static;
+                box-shadow: none;
+                background: #f8f9fa;
+                margin: 10px 0;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
             }
         }
+
+        @media (max-width: 768px) {
+            .top-contact-bar {
+                font-size: 12px;
+                padding: 5px 0;
+            }
+            
+            .top-contact-bar .contact-left {
+                gap: 15px;
+            }
+            
+            .company-tagline {
+                display: none;
+            }
+            
+            .logo-section img {
+                height: 50px;
+            }
+            
+            body.it-solution {
+                padding-top: 90px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .top-contact-bar .contact-left {
+                flex-direction: column;
+                gap: 5px;
+            }
+            
+            .top-contact-bar .social-links {
+                gap: 10px;
+            }
+            
+            .logo-section img {
+                height: 45px;
+            }
+        }
+
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
     </style>
 
 </head>
@@ -72,79 +407,74 @@
     <div class="se-pre-con"></div>
     <!-- Preloader Ends -->
 
-    <!-- Unified Header Component -->
-    <div class="unified-header">
-        <!-- Top Bar with Social Links and Contact Info -->
-        <div class="top-bar-area bg-dark text-light">
+    <!-- Raison-Inspired Header -->
+    <header class="raison-header">
+        <!-- Top Contact Bar -->
+        <div class="top-contact-bar">
             <div class="container">
-                <div class="row align-center">
-                    <div class="col-lg-3 shape">
-                        <ul class="social">
-                            <li class="linkedin">
-                                <a href="https://www.linkedin.com/company/onetouchcontrols/"><i class="fab fa-linkedin-in"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-9 info float-right text-right">
-                        <div class="info box">
-                            <ul class="list">
-                                <li>
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    Navi Mumbai, India
-                                </li>
-                                <li>
-                                    <i class="fas fa-envelope-open"></i>
-                                    <a href="mailto:info@onetouchcontrols.in">info@onetouchcontrols.in</a>
-                                </li>
-                            </ul>
+                <div class="contact-info">
+                    <div class="contact-left">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@onetouchcontrols.in">info@onetouchcontrols.in</a>
                         </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Navi Mumbai, India</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Mon - Sat: 9:00 AM - 6:00 PM</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/company/onetouchcontrols/" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <!-- Main Navigation -->
-        <header id="home">
-            <nav class="navbar navbar-default inc-top-bar navbar-fixed navbar-transparent white bootsnav" style="background-color: white;">
-                <div class="container">
-                    <!-- Start Header Navigation -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-                            <i class="fa fa-bars"></i>
-                        </button>
-                        <a class="navbar-brand" href="index.html">
-                            <img src="assets/img/onetouch-logo.png" class="logo logo-display" alt="Logo">
-                            <img src="assets/img/onetouch-logo.png" class="logo logo-scrolled" alt="Logo">
+        <div class="main-navigation">
+            <div class="container">
+                <div class="nav-container">
+                    <!-- Logo Section -->
+                    <div class="logo-section">
+                        <a href="index.html">
+                            <img src="assets/img/onetouch-logo.png" alt="OneTouch Controls">
                         </a>
                     </div>
-                    <!-- End Header Navigation -->
 
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="navbar-menu">
-                        <ul class="nav navbar-nav navbar-right" data-in="#" data-out="#">
+                    <!-- Navigation Menu -->
+                    <nav>
+                        <ul class="nav-menu" id="nav-menu">
+                            <li class="active"><a href="index.html">Home</a></li>
+                            <li><a href="about-us.html">About Us</a></li>
                             <li class="dropdown">
-                                <a href="index.html" style="color: black;">Home</a>
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: black;" onclick="return false;">Services</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="machine-vision.html">Machine Vision</a></li>
+                                    <li><a href="robotics.html">Robotics</a></li>
+                                    <li><a href="plc-motion-controller.html">PLC/Motion Controller</a></li>
+                                </ul>
                             </li>
-                            <li class="dropdown">
-                                <a href="about-us.html" style="color: black;">About Us</a>
-                            </li>                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: black;" onclick="return false;">Services</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="machine-vision.html">Machine Vision</a></li>
-                                <li><a href="robotics.html">Robotics</a></li>
-                                <li><a href="plc-motion-controller.html">PLC/Motion Controller</a></li>
-                            </ul>
-                        </li>
-                            <li>
-                                <a href="contact.html" style="color: black;">Contact Us</a>
-                            </li>
+                            <li><a href="contact.html" class="contact-btn">Contact Us</a></li>
                         </ul>
-                    </div><!-- /.navbar-collapse -->
+
+                        <!-- Mobile Menu Toggle -->
+                        <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </nav>
                 </div>
-            </nav>
-        </header>
-    </div>
-    <!-- End Unified Header Component -->
+            </div>
+        </div>
+    </header>
+    <!-- End Raison-Inspired Header -->
 
     <!-- Start Banner 
     ============================================= -->
@@ -153,7 +483,7 @@
 
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
-                <div class="carousel-item bg-cover active" style="background-image: url(assets/img/banner/banner1/DeWatermark.ai_1731494337996.png);">
+                <div class="carousel-item bg-cover active" style="background-image: url(assets/img/1st_banner.png);">
                     <div class="box-table shadow dark">
                         <div class="box-cell">
                             <div class="container">
@@ -175,6 +505,19 @@
                         </div>
                         <div class="sahpe" style="background-image: url(assets/img/shape/18.png);"></div>
                     </div>
+
+                    <!-- OneTouch Hands Animation -->
+                    <div class="onetouch-animation">
+                        <div class="hands-container">
+                            <div class="hand hand-left"></div>
+                            <div class="hand hand-right"></div>
+                            <div class="touch-effect"></div>
+                            <div class="touch-ripple"></div>
+                            <div class="touch-spark"></div>
+                            <div class="onetouch-text">OneTouch</div>
+                        </div>
+                    </div>
+                    <!-- End OneTouch Hands Animation -->
                 </div>
                 <div class="carousel-item bg-cover" style="background-image: url(assets/img/banner/banner2/products.webp);">
                     <div class="box-table shadow dark">
@@ -574,6 +917,29 @@
             // Ensure dropdown works when opening file directly
             $('.dropdown-toggle').on('click', function(e) {
                 console.log('Dropdown clicked');
+    <!-- JavaScript for Raison-Inspired Header -->
+    <script>
+        $(document).ready(function() {
+            // Mobile menu toggle
+            $('#mobile-menu-toggle').on('click', function() {
+                $('#nav-menu').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+
+            // Header scroll effect
+            $(window).scroll(function() {
+                var scrollTop = $(window).scrollTop();
+                var $header = $('.raison-header');
+                
+                if (scrollTop > 50) {
+                    $header.addClass('scrolled');
+                } else {
+                    $header.removeClass('scrolled');
+                }
+            });
+
+            // Dropdown functionality
+            $('.dropdown-toggle').on('click', function(e) {
                 e.preventDefault();
                 var $dropdown = $(this).next('.dropdown-menu');
                 $('.dropdown-menu').not($dropdown).hide();
@@ -589,13 +955,45 @@
             
             // Handle dropdown item clicks
             $('.dropdown-menu a').on('click', function(e) {
-                console.log('Dropdown item clicked: ' + $(this).attr('href'));
                 e.stopPropagation();
                 window.location.href = $(this).attr('href');
             });
-            
-            // Test if PLC.html file exists
-            console.log('Current location: ' + window.location.href);
+
+            // Smooth scrolling for anchor links
+            $('a[href^="#"]').on('click', function(e) {
+                e.preventDefault();
+                var target = this.hash;
+                var $target = $(target);
+                
+                if ($target.length) {
+                    $('html, body').animate({
+                        'scrollTop': $target.offset().top - 110
+                    }, 800, 'swing');
+                }
+            });
+
+            // Add active state to current page navigation
+            var currentPage = window.location.pathname.split('/').pop();
+            $('.nav-menu li a').each(function() {
+                var href = $(this).attr('href');
+                if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+                    $(this).closest('li').addClass('active').siblings().removeClass('active');
+                }
+            });
+
+            // Close mobile menu when clicking on a link
+            $('.nav-menu a').on('click', function() {
+                $('#nav-menu').removeClass('active');
+                $('#mobile-menu-toggle').removeClass('active');
+            });
+
+            // Handle window resize
+            $(window).resize(function() {
+                if ($(window).width() > 991) {
+                    $('#nav-menu').removeClass('active');
+                    $('#mobile-menu-toggle').removeClass('active');
+                }
+            });
         });
     </script>
 
