@@ -187,7 +187,7 @@ nav.bootsnav.nav-box .dropdown-menu {
 .navbar-brand {
   float: left;
   height: 50px;
-  padding: 15px 15px;
+  /* padding: 15px 15px; */
   font-size: 18px;
   line-height: 20px;
 }
@@ -1727,7 +1727,7 @@ nav.navbar.bootsnav {
   nav.navbar.bootsnav ul.nav > li > a {
     font-size: 15px;
     letter-spacing: 0.06em;
-    padding: 39px 15px;
+    padding: 34px 15px;
     text-transform: uppercase;
   }
 
@@ -1786,9 +1786,7 @@ nav.navbar.bootsnav {
     min-height: inherit;
   }
 
-  nav.navbar.bootsnav .navbar-brand {
-    padding: 20px 15px;
-  }
+
 
   nav.navbar.bootsnav ul.nav > li.active > a {
     color: #FF5E14;
@@ -3177,7 +3175,7 @@ nav.navbar.bootsnav {
 
 .navbar-brand>img {
   display: initial;
-  height: 60px;
+  height: 74px;
 }
 
 .attr-nav > ul > li {

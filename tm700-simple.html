@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TM700 Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .nav-link {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .nav-link:hover {
+            background-color: #0056b3;
+            text-decoration: none;
+            color: white;
+        }
+        .js-nav-button {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 14px;
+        }
+        .js-nav-button:hover {
+            background-color: #0056b3;
+        }
+        .js-nav-button.back {
+            background-color: #6c757d;
+        }
+        .js-nav-button.back:hover {
+            background-color: #5a6268;
+        }
+        .content {
+            margin-top: 30px;
+        }
+        .feature {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 4px solid #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TM700 Series Motion Controller - Test Page</h1>
+        
+        <div class="navigation">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="plc-motion-controller.html" class="nav-link">Back to PLC Page</a>
+            <a href="ts600-intelligent-plc.html" class="nav-link">TS600 Series</a>
+            <button class="js-nav-button back" onclick="window.location.href='plc-simple.html'">← PLC Simple</button>
+            <button class="js-nav-button" onclick="window.open('plc-motion-controller.html', '_blank')">Full PLC Page</button>
+        </div>
+        
+        <div class="content">
+            <h2>TM700 Series High-performance PLC</h2>
+            <p>The TM700 series high-performance programmable controller is mainly designed for scenarios with high motion control requirements and complex control networks.</p>
+            
+            <div class="feature">
+                <h3>🔧 Powerful Motion Control</h3>
+                <p>1ms@16 axes EtherCAT bus motion control, achieving multi-axis collaboration and significantly shortening takt time.</p>
+            </div>
+            
+            <div class="feature">
+                <h3>⚡ High-Speed I/O</h3>
+                <p>8 high-speed inputs and 8 high-speed outputs integrated, supporting encoder input, hardware latch, and pulse axis functions.</p>
+            </div>
+            
+            <div class="feature">
+                <h3>🌐 Efficient Network</h3>
+                <p>Rich network interfaces: EtherCAT, ModbusTCP, TCP/IP, UDP, EtherNet/IP, Modbus RTU, and CANopen support.</p>
+            </div>
+            
+            <div class="feature">
+                <h3>💻 Easy Programming</h3>
+                <p>Variable usage visibility helps with program optimization and troubleshooting. Axis unit conversions are clear and concise.</p>
+            </div>
+        </div>
+        
+        <div class="navigation" style="margin-top: 40px; text-align: center;">
+            <a href="plc-motion-controller.html" class="nav-link">← Back to PLC Products</a>
+            <button class="js-nav-button back" onclick="history.back()">← Go Back</button>
+            <button class="js-nav-button" onclick="window.location.href='plc-simple.html'">PLC Simple Page</button>
+        </div>
+    </div>
+</body>
+</html>

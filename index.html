@@ -28,531 +28,382 @@
     <link href="assets/css/responsive.css" rel="stylesheet" />
     <!-- ========== End Stylesheet ========== -->
 
-    <!-- Raison-Inspired Header CSS -->
     <style>
-        .raison-header {
-            position: fixed;
+        /* Industries We Serve Section Styles */
+        .industries-area {
+            background-color: #f8f9fa;
+            padding: 80px 0;
+        }
+
+        .industries-area .site-heading h4 {
+            color: #007bff;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .industries-area .site-heading h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .industries-area .site-heading p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .industries-items .single-item {
+            margin-bottom: 30px;
+        }
+
+        .industries-items .item {
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .industries-items .item::before {
+            content: '';
+            position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            z-index: 1000;
-            background: #ffffff;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
+            right: 0;
+            bottom: 0;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.1;
+            transition: opacity 0.3s ease;
+            z-index: 1;
         }
 
-        /* Top Contact Bar */
-        .top-contact-bar {
-            background: #2c3e50;
-            color: #ffffff;
-            padding: 8px 0;
-            font-size: 14px;
-            border-bottom: 3px solid #3498db;
+        .industries-items .item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0,123,255,0.05), rgba(0,86,179,0.05));
+            z-index: 1;
         }
 
-        .top-contact-bar .contact-info {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+        .industries-items .item:hover::before {
+            opacity: 0.9;
         }
 
-        .top-contact-bar .contact-left {
-            display: flex;
-            align-items: center;
-            gap: 30px;
+        .industries-items .item > .item-inner {
+            position: relative;
+            z-index: 2;
         }
 
-        .top-contact-bar .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: #ecf0f1;
+        /* Specific background images for each industry */
+        .industries-items .single-item:nth-child(1) .item::before {
+            background-image: url('assets/img/electrical-control-panel-board.jpg');
         }
 
-        .top-contact-bar .contact-item i {
-            color: #3498db;
-            font-size: 16px;
+        .industries-items .single-item:nth-child(2) .item::before {
+            background-image: url('assets/img/Pid-Temperature-Control-Panel-Board.jpg');
         }
 
-        .top-contact-bar .contact-item a {
-            color: #ecf0f1;
-            text-decoration: none;
-            transition: color 0.3s ease;
+        .industries-items .single-item:nth-child(3) .item::before {
+            background-image: url('assets/img/industries-textile.jpg');
         }
 
-        .top-contact-bar .contact-item a:hover {
-            color: #3498db;
+        .industries-items .single-item:nth-child(4) .item::before {
+            background-image: url('assets/img/industries-food.jpg');
         }
 
-        .top-contact-bar .social-links {
-            display: flex;
-            gap: 15px;
+        .industries-items .single-item:nth-child(5) .item::before {
+            background-image: url('assets/img/industries-steel.jpg');
         }
 
-        .top-contact-bar .social-links a {
+        .industries-items .single-item:nth-child(6) .item::before {
+            background-image: url('assets/img/industries-oem.png');
+        }
+
+        .industries-items .item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.1;
+            transition: opacity 0.3s ease;
+            z-index: 1;
+        }
+
+        .industries-items .item:hover::before {
+            opacity: 0.9;
+        }
+
+        .industries-items .item > .item-inner {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Specific background images for each industry */
+        .industries-items .single-item:nth-child(1) .item::before {
+            background-image: url('assets/img/electrical-control-panel-board.jpg');
+        }
+
+        .industries-items .single-item:nth-child(2) .item::before {
+            background-image: url('assets/img/Pid-Temperature-Control-Panel-Board.jpg');
+        }
+
+        .industries-items .single-item:nth-child(3) .item::before {
+            background-image: url('assets/img/industries-textile.jpg');
+        }
+
+        .industries-items .single-item:nth-child(4) .item::before {
+            background-image: url('assets/img/industries-food.jpg');
+        }
+
+        .industries-items .single-item:nth-child(5) .item::before {
+            background-image: url('assets/img/industries-steel.jpg');
+        }
+
+        .industries-items .single-item:nth-child(6) .item::before {
+            background-image: url('assets/img/industries-oem.png');
+        }
+
+        .industries-items .item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .industry-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 30px;
-            height: 30px;
-            background: rgba(52, 152, 219, 0.2);
-            border-radius: 50%;
-            color: #3498db;
-            text-decoration: none;
+            margin: 0 auto 20px;
             transition: all 0.3s ease;
         }
 
-        .top-contact-bar .social-links a:hover {
-            background: #3498db;
-            color: #ffffff;
-            transform: translateY(-2px);
+        .industry-icon i {
+            font-size: 30px;
+            color: #fff;
         }
 
-        /* Main Navigation */
-        .main-navigation {
-            background: #ffffff;
-            padding: 2px 0;
-            transition: all 0.3s ease;
+        .industries-items .item:hover .industry-icon {
+            transform: scale(1.1);
         }
 
-        .raison-header.scrolled .main-navigation {
-            padding: 10px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        .industries-items .item h4 {
+            color: #333;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            line-height: 1.3;
         }
 
-        .nav-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+        .industries-items .item p {
+            color: #140f0f;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 0;
         }
 
-        /* Logo Styling */
-        .logo-section {
-            display: flex;
-            align-items: center;
+        /* Trust Section Styles */
+        .trust-section {
+            margin-top: 60px;
+            padding-top: 60px;
+            border-top: 1px solid #e9ecef;
         }
 
-        .logo-section img {
+        .trust-item {
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .trust-icon {
+            width: 60px;
             height: 60px;
-            width: auto;
-            transition: all 0.3s ease;
-        }
-
-        .raison-header.scrolled .logo-section img {
-            height: 50px;
-        }
-
-        .company-tagline {
-            margin-left: 15px;
-            color: #2c3e50;
-            font-size: 12px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            line-height: 1.2;
-            max-width: 200px;
-        }
-
-        /* Navigation Menu */
-        .nav-menu {
+            background: #FF5E14;
+            border-radius: 50%;
             display: flex;
             align-items: center;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            gap: 5px;
+            justify-content: center;
+            margin: 0 auto 20px;
+            transition: all 0.3s ease;
         }
 
-        .nav-menu > li {
-            position: relative;
+        .trust-icon i {
+            font-size: 24px;
+            color: #fff;
         }
 
-        .nav-menu > li > a {
-            display: block;
-            padding: 12px 18px;
-            color: #2c3e50;
-            text-decoration: none;
+        .trust-item:hover .trust-icon {
+            transform: scale(1.1);
+        }
+
+        .trust-item h5 {
+            color: #333;
+            font-size: 18px;
             font-weight: 600;
-            font-size: 15px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-            position: relative;
+            margin-bottom: 15px;
         }
 
-        .nav-menu > li > a:hover,
-        .nav-menu > li.active > a {
-            color: #3498db;
-        }
-
-        .nav-menu > li > a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 3px;
-            bottom: 0;
-            left: 50%;
-            background: #3498db;
-            transition: all 0.3s ease;
-            transform: translateX(-50%);
-        }
-
-        .nav-menu > li > a:hover::after,
-        .nav-menu > li.active > a::after {
-            width: 80%;
-        }
-
-        /* Dropdown Styling */
-        .nav-menu .dropdown-menu {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            min-width: 220px;
-            background: #ffffff;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-            border: none;
-            border-radius: 8px;
-            padding: 10px 0;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(10px);
-            transition: all 0.3s ease;
-            z-index: 1000;
-        }
-
-        .nav-menu .dropdown:hover .dropdown-menu {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-
-        .nav-menu .dropdown-menu li a {
-            display: block;
-            padding: 12px 20px;
-            color: #2c3e50;
-            text-decoration: none;
-            font-weight: 500;
-            text-transform: none;
-            letter-spacing: normal;
-            transition: all 0.3s ease;
-        }
-
-        .nav-menu .dropdown-menu li a:hover {
-            background: #3498db;
-            color: #ffffff;
-            transform: translateX(5px);
-        }
-
-        /* Contact Button */
-        .contact-btn {
-            background: linear-gradient(135deg, #3498db, #2980b9);
-            color: #ffffff !important;
-            padding: 12px 25px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
-        }
-
-        .contact-btn:hover {
-            background: linear-gradient(135deg, #2980b9, #3498db);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
-            color: #ffffff !important;
-        }
-
-        /* Mobile Menu Toggle */
-        .mobile-menu-toggle {
-            display: none;
-            flex-direction: column;
-            background: none;
-            border: none;
-            padding: 5px;
-            cursor: pointer;
-        }
-
-        .mobile-menu-toggle span {
-            width: 25px;
-            height: 3px;
-            background: #2c3e50;
-            margin: 3px 0;
-            transition: 0.3s;
-            border-radius: 2px;
-        }
-
-        .mobile-menu-toggle.active span:nth-child(1) {
-            transform: rotate(-45deg) translate(-5px, 6px);
-        }
-
-        .mobile-menu-toggle.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .mobile-menu-toggle.active span:nth-child(3) {
-            transform: rotate(45deg) translate(-5px, -6px);
-        }
-
-        /* Adjust body padding */
-        body.it-solution {
-            padding-top: 110px;
+        .trust-item p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 0;
         }
 
         /* Responsive Design */
-        @media (max-width: 991px) {
-            .company-tagline {
-                display: none;
-            }
-            
-            .nav-menu {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: #ffffff;
-                flex-direction: column;
-                box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-                padding: 20px;
-                gap: 0;
-            }
-            
-            .nav-menu.active {
-                display: flex;
-            }
-            
-            .nav-menu > li {
-                width: 100%;
-                border-bottom: 1px solid #ecf0f1;
-            }
-            
-            .nav-menu > li > a {
-                padding: 15px 0;
-                border-bottom: none;
-            }
-            
-            .mobile-menu-toggle {
-                display: flex;
-            }
-            
-            .contact-btn {
-                margin-top: 15px;
-                text-align: center;
-            }
-            
-            .nav-menu .dropdown-menu {
-                position: static;
-                box-shadow: none;
-                background: #f8f9fa;
-                margin: 10px 0;
-                opacity: 1;
-                visibility: visible;
-                transform: none;
-            }
-        }
-
         @media (max-width: 768px) {
-            .top-contact-bar {
-                font-size: 12px;
-                padding: 5px 0;
+            .industries-area {
+                padding: 60px 0;
             }
             
-            .top-contact-bar .contact-left {
-                gap: 15px;
+            .industries-items .item {
+                padding: 30px 20px;
             }
             
-            .company-tagline {
-                display: none;
+            .trust-section {
+                margin-top: 40px;
+                padding-top: 40px;
             }
             
-            .logo-section img {
-                height: 50px;
-            }
-            
-            body.it-solution {
-                padding-top: 90px;
+            .trust-item {
+                padding: 20px 15px;
+                margin-bottom: 30px;
             }
         }
 
-        @media (max-width: 576px) {
-            .top-contact-bar .contact-left {
-                flex-direction: column;
-                gap: 5px;
-            }
-            
-            .top-contact-bar .social-links {
-                gap: 10px;
-            }
-            
-            .logo-section img {
-                height: 45px;
-            }
+        /* Our Team Strength Section Styles */
+        .team-strength-area {
+            background-color: #f8f9fa;
+            padding: 80px 0;
         }
 
-
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
+        .team-strength-area .site-heading h4 {
+            color: #007bff;
+            font-weight: 600;
+            margin-bottom: 10px;
         }
 
-        /* Letter by letter animation for banner text */
-        .letter-animation {
-            display: inline-block;
-        }
-
-        .letter-animation .letter {
-            display: inline-block;
-            opacity: 0;
-            transform: translateY(30px) rotateX(90deg);
-            animation: letterFadeIn 0.8s ease-out forwards;
-        }
-
-        .letter-animation .letter.space {
-            width: 0.3em;
-        }
-
-        @keyframes letterFadeIn {
-            0% {
-                opacity: 0;
-                transform: translateY(30px) rotateX(90deg) scale(0.8);
-            }
-            50% {
-                transform: translateY(-5px) rotateX(0deg) scale(1.05);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0) rotateX(0deg) scale(1);
-            }
-        }
-
-        /* Add staggered delays for each letter */
-        .letter-animation .letter:nth-child(1) { animation-delay: 0.1s; }
-        .letter-animation .letter:nth-child(2) { animation-delay: 0.15s; }
-        .letter-animation .letter:nth-child(3) { animation-delay: 0.2s; }
-        .letter-animation .letter:nth-child(4) { animation-delay: 0.25s; }
-        .letter-animation .letter:nth-child(5) { animation-delay: 0.3s; }
-        .letter-animation .letter:nth-child(6) { animation-delay: 0.35s; }
-        .letter-animation .letter:nth-child(7) { animation-delay: 0.4s; }
-        .letter-animation .letter:nth-child(8) { animation-delay: 0.45s; }
-        .letter-animation .letter:nth-child(9) { animation-delay: 0.5s; }
-        .letter-animation .letter:nth-child(10) { animation-delay: 0.55s; }
-        .letter-animation .letter:nth-child(11) { animation-delay: 0.6s; }
-        .letter-animation .letter:nth-child(12) { animation-delay: 0.65s; }
-        .letter-animation .letter:nth-child(13) { animation-delay: 0.7s; }
-        .letter-animation .letter:nth-child(14) { animation-delay: 0.75s; }
-        .letter-animation .letter:nth-child(15) { animation-delay: 0.8s; }
-        .letter-animation .letter:nth-child(16) { animation-delay: 0.85s; }
-        .letter-animation .letter:nth-child(17) { animation-delay: 0.9s; }
-        .letter-animation .letter:nth-child(18) { animation-delay: 0.95s; }
-        .letter-animation .letter:nth-child(19) { animation-delay: 1s; }
-        .letter-animation .letter:nth-child(20) { animation-delay: 1.05s; }
-        .letter-animation .letter:nth-child(21) { animation-delay: 1.1s; }
-        .letter-animation .letter:nth-child(22) { animation-delay: 1.15s; }
-        .letter-animation .letter:nth-child(23) { animation-delay: 1.2s; }
-        .letter-animation .letter:nth-child(24) { animation-delay: 1.25s; }
-        .letter-animation .letter:nth-child(25) { animation-delay: 1.3s; }
-
-        /* Special styling for the strong part */
-        .letter-animation strong .letter {
-            color: #FF5E14;
+        .team-strength-area .site-heading h2 {
+            color: #333;
+            margin-bottom: 20px;
             font-weight: bold;
         }
 
-        /* Enhanced effect for strong letters */
-        .letter-animation strong .letter {
-            animation: letterFadeInStrong 0.8s ease-out forwards;
+        .team-strength-area .site-heading p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.7;
         }
 
-        @keyframes letterFadeInStrong {
-            0% {
-                opacity: 0;
-                transform: translateY(40px) rotateX(90deg) scale(0.7);
-                text-shadow: 0 0 0 transparent;
-            }
-            50% {
-                transform: translateY(-8px) rotateX(0deg) scale(1.1);
-                text-shadow: 0 0 15px rgba(255, 94, 20, 0.5);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0) rotateX(0deg) scale(1);
-                text-shadow: 0 0 10px rgba(255, 94, 20, 0.3);
-            }
+        .team-strength-grid {
+            margin-top: 50px;
         }
 
-        /* Split Text Layout Styles */
-        .banner-content-vertical {
-            width: 100% !important;
-            text-align: left;
+        .col-lg-2-4 {
+            flex: 0 0 20%;
+            max-width: 20%;
         }
 
-        .onetouch-controls-brand {
-            font-size: 2.5rem;
-            color: #FF5E14;
-            font-weight: 700;
-            margin: 0 0 20px 0;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-            letter-spacing: 2px;
+        .strength-item {
+            background: #fff;
+            padding: 40px 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            height: 100%;
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
         }
 
-        .main-tagline {
-            font-size: 4rem;
-            margin: 0;
-            color: #ffffff;
-            line-height: 1.2;
+        .strength-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
         }
 
-        .main-tagline strong .letter {
-            color: #c2d6ec;
-            font-weight: bold;
+        .strength-icon {
+            width: 60px;
+            height: 60px;
+            background: #FF5E14;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            transition: all 0.3s ease;
         }
 
-        /* Responsive adjustments */
-        /* Responsive adjustments */
+        .strength-icon i {
+            font-size: 24px;
+            color: #fff;
+        }
+
+        .strength-item:hover .strength-icon {
+            transform: scale(1.1);
+        }
+
+        .strength-item h5 {
+            color: #333;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            line-height: 1.3;
+            min-height: 40px;
+        }
+
+        .strength-item p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        /* Team Strength Responsive Design */
         @media (max-width: 1200px) {
-            .onetouch-controls-brand {
-                font-size: 2.2rem;
-            }
-            .main-tagline {
-                font-size: 3.5rem;
+            .col-lg-2-4 {
+                flex: 0 0 33.333333%;
+                max-width: 33.333333%;
             }
         }
 
         @media (max-width: 768px) {
-            .banner-content-vertical {
-                text-align: center;
+            .team-strength-area {
+                padding: 60px 0;
             }
-            .onetouch-controls-brand {
-                font-size: 1.8rem;
-                margin-bottom: 15px;
+            
+            .col-lg-2-4 {
+                flex: 0 0 50%;
+                max-width: 50%;
             }
-            .main-tagline {
-                font-size: 2.8rem;
+            
+            .strength-item {
+                padding: 30px 15px;
             }
         }
 
         @media (max-width: 576px) {
-            .onetouch-controls-brand {
-                font-size: 1.5rem;
-                letter-spacing: 1px;
-            }
-            .main-tagline {
-                font-size: 2.2rem;
+            .col-lg-2-4 {
+                flex: 0 0 100%;
+                max-width: 100%;
             }
         }
-        /* Remove old split layout styles */
-        .text-layout,
-        .left-text,
-        .right-text,
-        .innovation-text,
-        .single-touch-text,
-        .onetouch-brand {
-            display: none;
-        }
-
     </style>
+
+  
 
 </head>
 
@@ -562,74 +413,135 @@
     <div class="se-pre-con"></div>
     <!-- Preloader Ends -->
 
-    <!-- Raison-Inspired Header -->
-    <header class="raison-header">
-        <!-- Top Contact Bar -->
-        <div class="top-contact-bar">
-            <div class="container">
-                <div class="contact-info">
-                    <div class="contact-left">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <a href="mailto:info@onetouchcontrols.in">info@onetouchcontrols.in</a>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Navi Mumbai, India</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-clock"></i>
-                            <span>Mon - Sat: 9:00 AM - 6:00 PM</span>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/company/onetouchcontrols/" target="_blank">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </div>
+      <!-- Start Header Top 
+    ============================================= -->
+    <div class="top-bar-area bg-dark text-light">
+        <div class="container">
+            <div class="row align-center">
+                <div class="col-lg-3 shape">
+                    <ul class="social">
+                        <li class="twitter">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li class="linkedin">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-        </div>
-
-        <!-- Main Navigation -->
-        <div class="main-navigation">
-            <div class="container">
-                <div class="nav-container">
-                    <!-- Logo Section -->
-                    <div class="logo-section">
-                        <a href="index.html">
-                            <img src="assets/img/onetouch-logo.png" alt="OneTouch Controls">
-                        </a>
-                    </div>
-
-                    <!-- Navigation Menu -->
-                    <nav>
-                        <ul class="nav-menu" id="nav-menu">
-                            <li class="active"><a href="index.html">Home</a></li>
-                            <li><a href="about-us.html">About Us</a></li>
-                            <li class="dropdown">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: black;" onclick="return false;">Services</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="machine-vision.html">Machine Vision</a></li>
-                                    <li><a href="robotics.html">Robotics</a></li>
-                                    <li><a href="plc-motion-controller.html">PLC/Motion Controller</a></li>
-                                </ul>
+                <div class="col-lg-9 info float-right text-right">
+                    <div class="info box">
+                        <ul class="list">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                Navi Mumbai, Maharashtra
                             </li>
-                            <li><a href="contact.html" class="contact-btn">Contact Us</a></li>
+                            <li>
+                                <i class="fas fa-envelope-open"></i>
+                                <a href="mailto:info@gmail.com">info@onetouchcontrols.in</a>
+                            </li>
                         </ul>
-
-                        <!-- Mobile Menu Toggle -->
-                        <button class="mobile-menu-toggle" id="mobile-menu-toggle">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </button>
-                    </nav>
+                        
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+    <!-- End Header Top -->
+
+    <!-- Header 
+    ============================================= -->
+    <header id="home">
+
+        <!-- Start Navigation -->
+        <nav class="navbar navbar-default navbar-sticky bootsnav">
+
+            <!-- Start Top Search -->
+            <div class="top-search">
+                <div class="container">
+                    <form method="get">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                            <input type="text" class="form-control" placeholder="Search">
+                            <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- End Top Search -->
+
+            <div class="container">
+
+                <!-- Start Atribute Navigation -->
+                <div class="attr-nav">
+                    <ul>
+                        <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
+                    </ul>
+                </div>        
+                <!-- End Atribute Navigation -->
+
+                <!-- Start Header Navigation -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/img/one_touch_logo_b-1.png" class="logo" alt="Logo">
+                    </a>
+                </div>
+                <!-- End Header Navigation -->
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav navbar-right" data-in="#" data-out="#">
+                        <li class="dropdown">
+                            <a href="#" class=" active" >Home</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle smooth-menu" data-toggle="dropdown" >Our Company</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="about-us.html">About Us</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="gallery-grid-3-colum.html" class="smooth-menu" >Projects</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" onclick="return false;">Services</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="machine-vision.html">Machine Vision</a></li>
+                                <li><a href="robotics.html">Robotics</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Team</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="team.html">Team Grid</a></li>
+                                <li><a href="team-carousel.html">Team Carousel</a></li>
+                                <li><a href="team-single.html">Team Single</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Blog</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="blog-standard.html">Blog Standard</a></li>
+                                <li><a href="blog-with-sidebar.html">Blog With Sidebar</a></li>
+                                <li><a href="blog-single.html">Blog Single</a></li>
+                                <li><a href="blog-single-with-sidebar.html">Blog Single With Sidebar</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div>
+
+        </nav>
+        <!-- End Navigation -->
+
     </header>
-    <!-- End Raison-Inspired Header -->
+    <!-- End Header -->
 
     <!-- Start Banner 
     ============================================= -->
@@ -679,42 +591,23 @@
                     </div>
                     <!-- End OneTouch Hands Animation -->
                 </div>
-                <div class="carousel-item bg-cover" style="background-image: url(assets/img/banner/banner2/products.webp);">
+                <!-- Control Panel Manufacturing Slide -->
+                <div class="carousel-item bg-cover" style="background-image: url(assets/img/electrical-control-panel-board.jpg);">
+                    <!-- 
+                    RECOMMENDED IMAGE: Search for "industrial control panel manufacturing" or "electrical automation panel"
+                    Suggested dimensions: 1920x1080 or higher
+                    Save as: assets/img/banner/control-panel-hq.jpg
+                    -->
                     <div class="box-table shadow dark">
                         <div class="box-cell">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-lg-7 offset-lg-1">
                                         <div class="content">
-                                            <!-- <h4 class="animated slideInLeft">IT Software & Design</h4> -->
-                                            <h2 data-animation="animated slideInDown"><strong>Industrial automation</strong></h2>
-                                            <!-- <p class="animated slideInRight">
-                                                Affixed pretend account ten natural. Need eat week even yet that. Incommode delighted he resolving sportsmen do in listening.
-                                            </p> -->
-                                            <!-- <div class="slider-button">
-                                                <a data-animation="animated slideInUp" class="btn btn-theme effect btn-md" href="projects-details.html">View Projects</a>
-                                            </div> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sahpe" style="background-image: url(assets/img/shape/18.png);"></div>
-                    </div>
-                </div>
-                <div class="carousel-item bg-cover" style="background-image: url(assets/img/banner/banner3/b.jpg);">
-                    <div class="box-table shadow dark">
-                        <div class="box-cell">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-7 offset-lg-1">
-                                        <div class="content">
-                                            <!-- <h4 class="animated slideInLeft">IT Software & Design</h4> -->
-                                            <h2 data-animation="animated slideInDown"> <strong>Robots integration</strong></h2>
-                                            <p class="animated slideInRight" >
-                                               <ul style="list-style: circle;">
-                                                <li style="color: white;">Smart Manufacturing</li>
-                                               </ul>
+                                            <h4 class="animated slideInLeft">Complete Automation Solutions</h4>
+                                            <h2 data-animation="animated slideInDown">Control Panel <strong>Manufacturing</strong></h2>
+                                            <p class="animated slideInRight">
+                                                Custom-built control panels with PLC, HMI, VFD integration for seamless industrial automation solutions.
                                             </p>
                                             <div class="slider-button">
                                                 <a data-animation="animated slideInUp" class="btn btn-theme effect btn-md" href="projects-details.html">View Projects</a>
@@ -727,20 +620,26 @@
                         <div class="sahpe" style="background-image: url(assets/img/shape/18.png);"></div>
                     </div>
                 </div>
-                <div class="carousel-item bg-cover" style="background-image: url(assets/img/banner/banner4/contant.png);">
+                <!-- PLC & SCADA Solutions Slide -->
+                <div class="carousel-item bg-cover" style="background-image: url(assets/img/delta-plc.jpg);">
+                    <!-- 
+                    RECOMMENDED IMAGE: Search for "PLC programming industrial" or "SCADA control room"
+                    Suggested dimensions: 1920x1080 or higher
+                    Save as: assets/img/banner/plc-scada-hq.jpg
+                    -->
                     <div class="box-table shadow dark">
                         <div class="box-cell">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-lg-7 offset-lg-1">
                                         <div class="content">
-                                            <h4 class="animated slideInLeft">IT Software & Design</h4>
-                                            <h2 data-animation="animated slideInDown">Transform every <strong>Digital Process</strong></h2>
+                                            <h4 class="animated slideInLeft">PLC & SCADA Solutions</h4>
+                                            <h2 data-animation="animated slideInDown">Advanced <strong>Process Control</strong></h2>
                                             <p class="animated slideInRight">
-                                                Affixed pretend account ten natural. Need eat week even yet that. Incommode delighted he resolving sportsmen do in listening.
+                                                Comprehensive PLC programming and SCADA systems for efficient monitoring and control of industrial processes.
                                             </p>
                                             <div class="slider-button">
-                                                <a data-animation="animated slideInUp" class="btn btn-theme effect btn-md" href="projects-details.html">View Projects</a>
+                                                <a data-animation="animated slideInUp" class="btn btn-theme effect btn-md" href="projects-details.html">Learn More</a>
                                             </div>
                                         </div>
                                     </div>
@@ -750,20 +649,84 @@
                         <div class="sahpe" style="background-image: url(assets/img/shape/18.png);"></div>
                     </div>
                 </div>
-                <div class="carousel-item bg-cover" style="background-image: url(assets/img/banner/banner5/DeWatermark.ai_1731496121910.png);">
+                <!-- Motion Control & Servo Slide -->
+                <div class="carousel-item bg-cover" style="background-image: url(assets/img/delta-servo.jfif);">
+                    <!-- 
+                    RECOMMENDED IMAGE: Search for "servo motor industrial automation" or "precision motion control"
+                    Suggested dimensions: 1920x1080 or higher
+                    Save as: assets/img/banner/servo-motion-hq.jpg
+                    -->
                     <div class="box-table shadow dark">
                         <div class="box-cell">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-lg-7 offset-lg-1">
                                         <div class="content">
-                                            <h4 class="animated slideInLeft">IT Software & Design</h4>
-                                            <h2 data-animation="animated slideInDown">Transform every <strong>Digital Process</strong></h2>
+                                            <h4 class="animated slideInLeft">Motion Control Systems</h4>
+                                            <h2 data-animation="animated slideInDown">Precision <strong>Servo Solutions</strong></h2>
                                             <p class="animated slideInRight">
-                                                Affixed pretend account ten natural. Need eat week even yet that. Incommode delighted he resolving sportsmen do in listening.
+                                                High-performance servo drives and motors for accurate positioning and speed control in demanding applications.
                                             </p>
                                             <div class="slider-button">
-                                                <a data-animation="animated slideInUp" class="btn btn-theme effect btn-md" href="projects-details.html">View Projects</a>
+                                                <a data-animation="animated slideInUp" class="btn btn-theme effect btn-md" href="projects-details.html">Explore Solutions</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sahpe" style="background-image: url(assets/img/shape/18.png);"></div>
+                    </div>
+                </div>
+                <!-- VFD Solutions Slide -->
+                <div class="carousel-item bg-cover" style="background-image: url(assets/img/ABB-VFD.jpg);">
+                    <!-- 
+                    RECOMMENDED IMAGE: Search for "variable frequency drive VFD" or "motor control industrial"
+                    Suggested dimensions: 1920x1080 or higher
+                    Save as: assets/img/banner/vfd-motor-hq.jpg
+                    -->
+                    <div class="box-table shadow dark">
+                        <div class="box-cell">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-7 offset-lg-1">
+                                        <div class="content">
+                                            <h4 class="animated slideInLeft">Variable Frequency Drives</h4>
+                                            <h2 data-animation="animated slideInDown">Energy Efficient <strong>Motor Control</strong></h2>
+                                            <p class="animated slideInRight">
+                                                Advanced VFD solutions for optimal motor speed control, energy savings, and enhanced system performance across industries.
+                                            </p>
+                                            <div class="slider-button">
+                                                <a data-animation="animated slideInUp" class="btn btn-theme effect btn-md" href="projects-details.html">Get Quote</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sahpe" style="background-image: url(assets/img/shape/18.png);"></div>
+                    </div>
+                </div>
+                <!-- HMI Solutions Slide -->
+                <div class="carousel-item bg-cover" style="background-image: url(assets/img/Delta_HMI.png);">
+                    <!-- 
+                    RECOMMENDED IMAGE: Search for "HMI human machine interface" or "industrial touchscreen control"
+                    Suggested dimensions: 1920x1080 or higher
+                    Save as: assets/img/banner/hmi-interface-hq.jpg
+                    -->
+                    <div class="box-table shadow dark">
+                        <div class="box-cell">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-7 offset-lg-1">
+                                        <div class="content">
+                                            <h4 class="animated slideInLeft">Human Machine Interface</h4>
+                                            <h2 data-animation="animated slideInDown">Intuitive <strong>HMI Solutions</strong></h2>
+                                            <p class="animated slideInRight">
+                                                User-friendly HMI systems providing real-time visualization, monitoring, and control for enhanced operational efficiency.
+                                            </p>
+                                            <div class="slider-button">
+                                                <a data-animation="animated slideInUp" class="btn btn-theme effect btn-md" href="contact.html">Contact Us</a>
                                             </div>
                                         </div>
                                     </div>
@@ -880,98 +843,143 @@
     </div>
     <!-- End Services Area -->
 
-    <!-- Start Choose Us
-    ============================================= -->
-    <div class="chooseus-area default-padding-top bg-theme text-light half-bg">
-        <div class="container">
-            <div class="row align-center">
-                <div class="col-lg-6 thumb">
-                    <div class="thumb-inner ">
-                        <img class="item-mousemove" src="assets/img/800x900.png" alt="Thumb">
-                    </div>
-                </div>
-                <div class="col-lg-6 info">
-                    <div class="content">
-                        <h2>We deal in all types of Automation Products.</h2>
-                        <ul>
-                            <li>
-                                <h5>PLC , HMI , SCADA</h5>
-                            </li>
-                            <li>
-                                <h5>Motion Controller</h5>
-                            </li>
-                            <li>
-                                <h5>SERVO Drives AND MOTORS, VFD</h5>
-                            </li>
-                            <li>
-                                <h5>Control Panel Manufacturing</h5>
-                            </li>
-                            <li>
-                                <h5>Encoders, Sensors, PID Controller</h5>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Chooseus Area -->
 
-    <!-- Start Work Porccess 
+
+    <!-- Start Industries We Serve 
     ============================================= -->
-    <div class="work-process-area relative default-padding bottom-less bg-fixed" style="background-image: url(assets/img/bg.png);">
+    <div class="industries-area relative default-padding bottom-less bg-fixed" style="background-image: url(assets/img/bg.png);">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
                     <div class="site-heading text-center">
-                        <h2 style="font-weight: bold;">Industries We Serve!</h2>
+                        <h4>Our Expertise</h4>
+                        <h2 style="font-weight: bold;">Industries We Serve</h2>
+                        <p>OneTouch Controls provides comprehensive automation solutions across diverse industrial sectors, delivering innovation and efficiency to drive your business forward.</p>
                     </div>
                 </div>
             </div>
-            <div class="work-pro-items">
+            <div class="industries-items">
                 <div class="row">
-                    <div class="col-lg-3 col-md-6 single-item">
+                    <!-- Water Treatment -->
+                    <div class="col-lg-4 col-md-6 single-item">
                         <div class="item">
                             <div class="item-inner">
-                                <!-- <i class="fas fa-video"></i> -->
-                                 <img src="assets/img/industries-food.jpg" alt="">
-                                <h4>Food Industry</h4>
-                                <!-- <p>
-                                    Preserved believing extremity. Easy mr pain felt in. Too northward affection additions nay. He no an nature ye talent houses wisdom vanity denied. 
-                                </p> -->
+                                <div class="industry-icon">
+                                    <i class="fas fa-tint"></i>
+                                </div>
+                                <h4>Waste Water Treatment Plant</h4>
+                                <p>Advanced automation solutions for efficient water treatment processes, ensuring environmental compliance and optimal resource management.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 single-item">
+                    
+                    <!-- Sewage Treatment -->
+                    <div class="col-lg-4 col-md-6 single-item">
                         <div class="item">
                             <div class="item-inner">
-                                <img src="assets/img/industries-steel.jpg" alt="">
-                                <h4>Steel Industry</h4>
-                                <!-- <p>
-                                    Preserved believing extremity. Easy mr pain felt in. Too northward affection additions nay. He no an nature ye talent houses wisdom vanity denied. 
-                                </p> -->
+                                <div class="industry-icon">
+                                    <i class="fas fa-recycle"></i>
+                                </div>
+                                <h4>Sewage Treatment Plant</h4>
+                                <p>Comprehensive sewage treatment automation systems for municipal and industrial applications with smart monitoring capabilities.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 single-item">
+
+                    <!-- Textiles -->
+                    <div class="col-lg-4 col-md-6 single-item">
                         <div class="item">
                             <div class="item-inner">
-                                <img src="assets/img/industries-oem.png" alt="">
-                                <h4>OEM & SPM Industry</h4>
-                                <!-- <p>
-                                    Preserved believing extremity. Easy mr pain felt in. Too northward affection additions nay. He no an nature ye talent houses wisdom vanity denied. 
-                                </p> -->
+                                <div class="industry-icon">
+                                    <i class="fas fa-cut"></i>
+                                </div>
+                                <h4>Textiles</h4>
+                                <p>Precision automation for textile manufacturing, from fiber processing to finished products, enhancing quality and productivity.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 single-item">
+
+                    <!-- Food & Beverage -->
+                    <div class="col-lg-4 col-md-6 single-item">
                         <div class="item">
                             <div class="item-inner">
-                                <img src="assets/img/industries-textile.jpg" alt="">
-                                <h4>Textile Industry</h4>
-                                <!-- <p>
-                                    Preserved believing extremity. Easy mr pain felt in. Too northward affection additions nay. He no an nature ye talent houses wisdom vanity denied. 
-                                </p> -->
+                                <div class="industry-icon">
+                                    <i class="fas fa-utensils"></i>
+                                </div>
+                                <h4>Food and Beverage</h4>
+                                <p>Food-grade automation solutions ensuring hygiene, safety, and efficiency in food processing and packaging operations.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Steel -->
+                    <div class="col-lg-4 col-md-6 single-item">
+                        <div class="item">
+                            <div class="item-inner">
+                                <div class="industry-icon">
+                                    <i class="fas fa-industry"></i>
+                                </div>
+                                <h4>Steel</h4>
+                                <p>Robust automation systems for steel manufacturing processes, from raw material handling to finished product quality control.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- OEM & SPM -->
+                    <div class="col-lg-4 col-md-6 single-item">
+                        <div class="item">
+                            <div class="item-inner">
+                                <div class="industry-icon">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <h4>OEM & SPM</h4>
+                                <p>Custom automation solutions for Original Equipment Manufacturers and Special Purpose Machines with tailored engineering.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trust and Expertise Section -->
+                <div class="row mt-5">
+                    <div class="col-lg-12">
+                        <div class="trust-section text-center">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="trust-item">
+                                        <div class="trust-icon">
+                                            <i class="fas fa-shield-alt"></i>
+                                        </div>
+                                        <h5>Trust In Us</h5>
+                                        <p>OneTouch Controls has a dedicated technical team for manufacturing all types of Electrical, PLC, VFD, HMI, and SCADA control panels.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="trust-item">
+                                        <div class="trust-icon">
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <h5>Comprehensive Expertise</h5>
+                                        <p>Specializing in design, development, maintenance, system integration, and consulting across multiple industrial sectors.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="trust-item">
+                                        <div class="trust-icon">
+                                            <i class="fas fa-award"></i>
+                                        </div>
+                                        <h5>Commitment to Quality</h5>
+                                        <p>Delivering reliable, efficient automation solutions that meet stringent quality standards and exceed expectations.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="trust-item">
+                                        <div class="trust-icon">
+                                            <i class="fas fa-users"></i>
+                                        </div>
+                                        <h5>Skilled Team</h5>
+                                        <p>Experienced engineers ensure high-quality workmanship and precision for projects of all complexities.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -979,7 +987,86 @@
             </div>
         </div>
     </div>
-    <!-- End Work Porccess -->
+    <!-- End Industries We Serve -->
+
+    <!-- Start Our Team Strength 
+    ============================================= -->
+    <div class="team-strength-area default-padding bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="site-heading text-center">
+                        <h4>Our Team</h4>
+                        <h2>Our Team Strength Has Below</h2>
+                        <p>Our dedicated team of professionals brings extensive expertise across all areas of industrial automation, ensuring comprehensive support for your projects.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="team-strength-grid">
+                        <div class="row">
+                            <!-- Field Sales Engineer -->
+                            <div class="col-lg-2-4 col-md-4 col-sm-6">
+                                <div class="strength-item">
+                                    <div class="strength-icon">
+                                        <i class="fas fa-handshake"></i>
+                                    </div>
+                                    <h5>Field Sales Engineer</h5>
+                                    <p>Expert field representatives managing client relationships and technical consultations</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Inside Sales (Pre Sales) -->
+                            <div class="col-lg-2-4 col-md-4 col-sm-6">
+                                <div class="strength-item">
+                                    <div class="strength-icon">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </div>
+                                    <h5>Inside Sales<br>(Pre Sales)</h5>
+                                    <p>Dedicated pre-sales support team providing technical guidance and solution design</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Programming Engineers -->
+                            <div class="col-lg-2-4 col-md-4 col-sm-6">
+                                <div class="strength-item">
+                                    <div class="strength-icon">
+                                        <i class="fas fa-code"></i>
+                                    </div>
+                                    <h5>Programming Engineers</h5>
+                                    <p>Skilled programmers specializing in PLC, HMI, SCADA, and automation software development</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Project Engineers -->
+                            <div class="col-lg-2-4 col-md-4 col-sm-6">
+                                <div class="strength-item">
+                                    <div class="strength-icon">
+                                        <i class="fas fa-project-diagram"></i>
+                                    </div>
+                                    <h5>Project Engineers</h5>
+                                    <p>Experienced project managers ensuring timely delivery and quality execution</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Technicians -->
+                            <div class="col-lg-2-4 col-md-4 col-sm-6">
+                                <div class="strength-item">
+                                    <div class="strength-icon">
+                                        <i class="fas fa-tools"></i>
+                                    </div>
+                                    <h5>Technicians</h5>
+                                    <p>Skilled technicians providing installation, maintenance, and technical support services</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Our Team Strength -->
 
 
 
