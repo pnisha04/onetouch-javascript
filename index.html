@@ -29,7 +29,7 @@
     <!-- ========== End Stylesheet ========== -->
 
     <style>
-        /* Industries We Serve Section Styles */
+         /* Industries We Serve Section Styles */
         .industries-area {
             background-color: #f8f9fa;
             padding: 80px 0;
@@ -50,6 +50,7 @@
             color: #666;
             font-size: 16px;
             line-height: 1.7;
+           
         }
 
         .industries-items .single-item {
@@ -66,6 +67,7 @@
             text-align: center;
             position: relative;
             overflow: hidden;
+
         }
 
         .industries-items .item::before {
@@ -106,6 +108,7 @@
         /* Specific background images for each industry */
         .industries-items .single-item:nth-child(1) .item::before {
             background-image: url('assets/img/electrical-control-panel-board.jpg');
+              backface-visibility: hidden;
         }
 
         .industries-items .single-item:nth-child(2) .item::before {
@@ -216,6 +219,7 @@
             font-size: 16px;
             line-height: 1.6;
             margin-bottom: 0;
+            font-weight: bold;
         }
 
         /* Trust Section Styles */
@@ -400,15 +404,158 @@
                 flex: 0 0 100%;
                 max-width: 100%;
             }
+            /* our services */
+            .col-lg-3 item{
+                max-width: 50%;
+            }
         }
     </style>
+    <!-- <style>
+     .popup-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.3s ease;
+    }
 
-  
+    /* Show popup */
+    .popup-overlay.active {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    /* Popup box */
+    .popup-box {
+      position: relative;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      max-width: 30%;
+      max-height: 70%;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    .popup-box img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Close button */
+    .close-btn {
+      position: absolute;
+      top: -3px;
+      right: 3px;
+      background:none;
+      color: black;
+      border: none;
+      font-size: 26px;
+      cursor: pointer;
+      z-index: 1000; 
+      /* position: absolute;
+      top: -15px; /* above the image */
+      /* right: -15px;
+      background:red;
+      color:white;
+      border: none;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+      /* padding: 5px 10px; */
+      /* border-radius: 50%; */
+      /* box-shadow: 0 2px 6px rgba(0,0,0,0.3); */
+      /* width:30%;
+      height:30%;
+      z-index: 1001;  */ 
+
+
+    }
+    @media (max-width: 500px) {
+      .close-btn {
+        top: -20px;
+        right: -5px;
+        font-size: 20px;
+      }
+    }
+  </style> -->
+
+   <style>
+    /* body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    } */
+
+    /* Overlay background */
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    /* Popup box */
+    .popup-box {
+      position: relative;
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      max-width: 400px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Popup image */
+    .popup-box img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    /* Close button (outside popup) */
+    .close-btn {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      background:white;
+      color: black;
+      border:none;
+      border-radius: 48%;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      font-size: 28px;
+      font-weight: bold;
+      /* border: #140f0f; */
+    }
+
+    .close-btn:hover {
+      background-color: blue;
+    }
+  </style>
 
 </head>
 
 <body class="it-solution">
+<div class="popup-overlay" id="popup">
+    <div class="popup-box">
+      <!-- <button class="close-btn" onclick="closePopup()">×</button> -->
+    <button class="close-btn" onclick="document.getElementById('popup').style.display='none'">×</button>
 
+      <img src="assets\img\popup-img.jpeg" alt="Popup Image">
+    </div>
+  </div>
     <!-- Preloader Start -->
     <div class="se-pre-con"></div>
     <!-- Preloader Ends -->
@@ -420,9 +567,9 @@
             <div class="row align-center">
                 <div class="col-lg-3 shape">
                     <ul class="social">
-                        <li class="twitter">
+                        <!-- <li class="twitter">
                             <a href="#"><i class="fab fa-twitter"></i></a>
-                        </li>
+                        </li> -->
                         <li class="linkedin">
                             <a href="#"><i class="fab fa-linkedin-in"></i></a>
                         </li>
@@ -503,25 +650,26 @@
                                 <li><a href="contact.html">Contact Us</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown">
+                        <!-- <li class="dropdown">
                             <a href="gallery-grid-3-colum.html" class="smooth-menu" >Projects</a>
-                        </li>
+                        </li> -->
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" onclick="return false;">Services</a>
                             <ul class="dropdown-menu">
                                 <li><a href="machine-vision.html">Machine Vision</a></li>
                                 <li><a href="robotics.html">Robotics</a></li>
+                                <li><a href="PLC-new.html">PLC</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown">
+                        <!-- <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Team</a>
                             <ul class="dropdown-menu">
                                 <li><a href="team.html">Team Grid</a></li>
                                 <li><a href="team-carousel.html">Team Carousel</a></li>
                                 <li><a href="team-single.html">Team Single</a></li>
                             </ul>
-                        </li>
-                        <li class="dropdown">
+                        </li> -->
+                        <!-- <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Blog</a>
                             <ul class="dropdown-menu">
                                 <li><a href="blog-standard.html">Blog Standard</a></li>
@@ -529,8 +677,8 @@
                                 <li><a href="blog-single.html">Blog Single</a></li>
                                 <li><a href="blog-single-with-sidebar.html">Blog Single With Sidebar</a></li>
                             </ul>
-                        </li>
-                        <li>
+                        </li>-->
+                        <li> 
                             <a href="contact.html">Contact Us</a>
                         </li>
                     </ul>
@@ -558,11 +706,11 @@
                                     <div class="col-lg-12">
                                         <div class="content banner-content-vertical">
                                             <!-- Top: OneTouch Controls -->
-                                            <h3 class="onetouch-controls-brand animated slideInDown">OneTouch Controls</h3>
+                                            <h3 class="onetouch-controls-brand animated slideInDown">Onetouch Controls</h3>
                                             
                                             <!-- Bottom: Innovation in Single Touch -->
                                             <h2 class="letter-animation main-tagline" data-animation="animated slideInUp">
-                                                <span class="letter">I</span><span class="letter">n</span><span class="letter">n</span><span class="letter">o</span><span class="letter">v</span><span class="letter">a</span><span class="letter">t</span><span class="letter">i</span><span class="letter">o</span><span class="letter">n</span><span class="letter space"></span><span class="letter">i</span><span class="letter">n</span><span class="letter space"></span><strong><span class="letter">S</span><span class="letter">i</span><span class="letter">n</span><span class="letter">g</span><span class="letter">l</span><span class="letter">e</span><span class="letter space"></span><span class="letter">T</span><span class="letter">o</span><span class="letter">u</span><span class="letter">c</span><span class="letter">h</span></strong>
+                                                <span class="letter">I</span><span class="letter">n</span><span class="letter">n</span><span class="letter">o</span><span class="letter">v</span><span class="letter">a</span><span class="letter">t</span><span class="letter">i</span><span class="letter">o</span><span class="letter">n</span><br><span class="letter space"></span><span class="letter">i</span><span class="letter">n</span><span class="letter space"></span><strong><span class="letter">S</span><span class="letter">i</span><span class="letter">n</span><span class="letter">g</span><span class="letter">l</span><span class="letter">e</span><span class="letter space"></span><span class="letter">T</span><span class="letter">o</span><span class="letter">u</span><span class="letter">c</span><span class="letter">h</span></strong>
                                             </h2>
                                             <!-- <p class="animated slideInRight">
                                                 Affixed pretend account ten natural. Need eat week even yet that. Incommode delighted he resolving sportsmen do in listening.
@@ -610,7 +758,7 @@
                                                 Custom-built control panels with PLC, HMI, VFD integration for seamless industrial automation solutions.
                                             </p>
                                             <div class="slider-button">
-                                                <a data-animation="animated slideInUp" class="btn btn-theme effect btn-md" href="projects-details.html">View Projects</a>
+                                                <a data-animation="animated slideInUp" class="btn btn-theme effect btn-md">View Projects</a>
                                             </div>
                                         </div>
                                     </div>
@@ -621,7 +769,9 @@
                     </div>
                 </div>
                 <!-- PLC & SCADA Solutions Slide -->
-                <div class="carousel-item bg-cover" style="background-image: url(assets/img/delta-plc.jpg);">
+                <!-- <div class="carousel-item bg-cover" style="background-image: url(assets/img/delta-plc.jpg);"> -->
+              <div class="carousel-item bg-cover" style="background-image: url(assets/img/banner/banner2/products.webp);">
+
                     <!-- 
                     RECOMMENDED IMAGE: Search for "PLC programming industrial" or "SCADA control room"
                     Suggested dimensions: 1920x1080 or higher
@@ -650,7 +800,7 @@
                     </div>
                 </div>
                 <!-- Motion Control & Servo Slide -->
-                <div class="carousel-item bg-cover" style="background-image: url(assets/img/delta-servo.jfif);">
+                <div class="carousel-item bg-cover" style="background-image: url(assets/img/banner/banner3/b.jpg);">
                     <!-- 
                     RECOMMENDED IMAGE: Search for "servo motor industrial automation" or "precision motion control"
                     Suggested dimensions: 1920x1080 or higher
@@ -679,7 +829,7 @@
                     </div>
                 </div>
                 <!-- VFD Solutions Slide -->
-                <div class="carousel-item bg-cover" style="background-image: url(assets/img/ABB-VFD.jpg);">
+                <div class="carousel-item bg-cover" style="background-image: url(assets/img/banner/banner4/vision.webp);">
                     <!-- 
                     RECOMMENDED IMAGE: Search for "variable frequency drive VFD" or "motor control industrial"
                     Suggested dimensions: 1920x1080 or higher
@@ -708,7 +858,7 @@
                     </div>
                 </div>
                 <!-- HMI Solutions Slide -->
-                <div class="carousel-item bg-cover" style="background-image: url(assets/img/Delta_HMI.png);">
+                <div class="carousel-item bg-cover" style="background-image: url(assets/img/banner/banner5/DeWatermark.ai_1731496121910.png);">
                     <!-- 
                     RECOMMENDED IMAGE: Search for "HMI human machine interface" or "industrial touchscreen control"
                     Suggested dimensions: 1920x1080 or higher
@@ -767,10 +917,10 @@
                 <div class="about-style-four col-lg-6">
                     <h4>About us</h4>
                     <h2>We deal in all types of Automation Products</h2>
-                        <p>One Touch Controls deals in all types of Automation Products like AC Drives / VFD, AC Motors, Control Panel Manufacturing, PLC, HMI, Encoders, PID Controller, Servo Drive Motor, Motion Controller. We give complete solutions for PLC Automation. </p>
+                        <p>OneTouch Controls deals in all types of Automation Products like AC Drives / VFD, AC Motors, Control Panel Manufacturing, PLC, HMI, Encoders, PID Controller, Servo Drive Motor, Motion Controller. We give complete solutions for PLC Automation. </p>
                         <p>We believe in providing Sales and Service of all Make Automation Product to our clients with our products and services so that they can work efficiently which leads to high productivity and hence profitability.</p>
                         <p>We look forward to receive your valuable enquiries and wish to develop long term fruitful business relations with your esteemed organization. For any further assistance / clarifications feel free to contact us. Thanking and assuring you of our best services at all times</p>
-                    <a class="btn btn-dark theme btn-md" href="about-us.html">Learn More</a>
+                    <a class="btn btn-dark theme btn-md" href="about-us.html">More Info</a>
                 </div>
             </div>
         </div>
@@ -797,7 +947,7 @@
                 <!-- Single Item  -->
                 <div class="services-style-five col-lg-3 col-md-6">
                     <div class="item">
-                        <img src="assets/img/icon/it-management.png" alt="Icon">
+                        <img src="assets/img/icon/it-management2.png" alt="Icon">
                         <h4><a href="#">Process Automation</a></h4>
                         <p>
                             Our customised automation solutions deliver superior value throughout the lifecycle of a plant. 
@@ -980,7 +1130,7 @@
                                         <p>Experienced engineers ensure high-quality workmanship and precision for projects of all complexities.</p>
                                     </div>
                                 </div>
-                            </div>
+                                </div>
                         </div>
                     </div>
                 </div>
@@ -1112,7 +1262,16 @@
                     <div class="col-lg-4 col-md-6 single-item">
                         <div class="f-item contact">
                             <h4 class="widget-title">Location</h4>
-                         
+                            <!-- <iframe
+                               src="https://maps.app.goo.gl/wTsN1aSQhirWNUza9"
+                               width="600"
+                               height="450"
+                               style="border:0;"
+                               allowfullscreen=""
+                               loading="lazy"
+                               referrerpolicy="no-referrer-when-downgrade">
+                            </iframe> -->
+                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.3580114117744!2d73.02522357425224!3d19.091943851473744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7bff81f75576d%3A0xc02493ee63ab751a!2sOnetouch%20Controls!5e0!3m2!1sen!2sin!4v1752831277320!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </div>
@@ -1164,8 +1323,8 @@
             // Ensure dropdown works when opening file directly
             $('.dropdown-toggle').on('click', function(e) {
                 console.log('Dropdown clicked');
-    <!-- JavaScript for Raison-Inspired Header -->
-    <script>
+
+
         $(document).ready(function() {
             // Mobile menu toggle
             $('#mobile-menu-toggle').on('click', function() {
@@ -1242,8 +1401,21 @@
                 }
             });
         });
-    </script>
+    });
+});
 
+    
+
+
+    // Show popup when page loads
+    window.onload = function() {
+      document.getElementById("popup").classList.add("active");
+    }
+
+    // Close popup
+    function closePopup() {
+      document.getElementById("popup").classList.remove("active");
+    }
+  </script>
 </body>
 </html>
-
