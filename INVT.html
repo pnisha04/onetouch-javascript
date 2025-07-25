@@ -29,122 +29,31 @@
     <link href="assets/css/responsive.css" rel="stylesheet" />
     <!-- ========== End Stylesheet ========== -->
 
- <!-- <style>
- * {
-      box-sizing: border-box;
-    }
-
-    body {
+  <style>
+     body {
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-      background-color: #f4f4f4;
+      padding: 10px;
     }
-
-    .image-grid {
+    .invt-container {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
       gap: 20px;
+      justify-content: center;
+      margin-bottom: 50px;
     }
 
     .image-box {
-      flex: 1 1 calc(25% - 20px); /* 4 per row */
-      background: #fff;
-      padding: 10px;
+      width: 250px;
       text-align: center;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      
     }
 
     .image-box img {
       width: 100%;
-      height: auto;
-      border-radius: 8px;
-    }
-
-    .image-box h3 {
-      margin-top: 10px;
-      font-size: 1.1em;
-    }
-
-    @media (max-width: 768px) {
-      .image-box {
-        flex: 1 1 calc(50% - 20px); /* 2 per row */
-      }
-    }
-
-    @media (max-width: 480px) {
-      .image-box {
-        flex: 1 1 100%; /* 1 per row */
-      }
-    }
-  </style> 
-   <style>
-     body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      padding: 0;
-      background: #f9f9f9;
-    }
-
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 50px;
-      justify-content: center;
-    }
-
-    .Image-box {
-      flex: 1 1 300px;
-      max-width: 300px;
-      text-align: center;
-    }
-
-    .Image-box h3 {
-      margin-bottom: 10px;
-      font-size: 50px;
-      color: #333;
-      font-weight: bold;
-    }
-
-    .Image-box img {
-      width: 100%;
-      height: 75%;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-
-    @media (max-width: 768px) {
-      .Image-box {
-        flex: 1 1 100%;
-        max-width: 100%;
-      }
-    }
-</style>-->
-<style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 10px;
-    }
-
-    .plc-type {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 50px;
-      justify-content: center;
-    }
-
-    .Image-box {
-      width: 300px;
-      text-align: center;
-    }
-
-    .Image-box img {
-      width: 100%;
-      height: 100%;
+      height: 70%;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+       border: 1px solid #ddd;
     }
 
     .title {
@@ -152,19 +61,25 @@
       font-size: 1rem;
       font-weight: bold;
     }
+    .image-box:hover img {
+      transform: scale(1.1); /* Zoom effect */
+      filter: brightness(80%); /* Darken image */
+    }
 
     @media (max-width: 768px) {
-      .Image-box {
+      .image-box {
         width: 45%;
+       
       }
     }
 
     @media (max-width: 480px) {
-      .Image-box {
+      .image-box {
         width: 100%;
+       
       }
     }
-  </style> 
+  </style>
 
     
 </head>
@@ -182,10 +97,10 @@
             <div class="row align-center">
                 <div class="col-lg-3 shape">
                     <ul class="social">
-                         <!-- <li class="facebook">
+                        <!-- <li class="facebook">
                             <a href="#"><i class="fab fa-facebook-f"></i></a>
                         </li>
-                        <li class="twitter">
+                         <li class="twitter">
                             <a href="#"><i class="fab fa-twitter"></i></a>
                         </li>
                         <li class="pinterest">
@@ -221,7 +136,7 @@
 
         <!-- Start Navigation -->
         <nav class="navbar navbar-default inc-top-bar navbar-fixed navbar-transparent white bootsnav" style="background-color: white;">
-              <!-- Start Top Search -->
+                <!-- Start Top Search -->
             <div class="top-search">
                 <div class="container">
                     <form method="get">
@@ -234,9 +149,8 @@
                 </div>
             </div>
             <!-- End Top Search -->
-
             <div class="container">
-                 <!-- Start Atribute Navigation -->
+                <!-- Start Atribute Navigation -->
                 <div class="attr-nav">
                     <ul>
                         <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
@@ -474,7 +388,7 @@
     <!-- End Features Section -->
 
     <!-- Start INVT Section -->
-    <!-- <div class="services-area bg-gray default-padding">
+     <!-- <div class="services-area bg-gray default-padding">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
@@ -486,61 +400,52 @@
                 </div>
             </div>
        </div>
+    </div> -->
+       <div class="services-details-area default-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="services-single-info">
+                        <h2>INVT</h2>
+                        <p>
+                        INVT PLC can be widely used in textile and chemical fiber, machine tools, cables, food and beverage, packaging, steel, construction machinery, air conditioning, elevators, printing and other machinery manufacturing industry. INVT HMI has many advantages, such as rich display, large memory and powerful configuration function, and using simple human machine interface can easily realize human - computer interaction function in various industrial automation fields. And INVT PLC and HMI have CE and RoHS Declaration.                        </p>
+ 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="image-grid">
+     <div class="invt-container">
     <div class="image-box">
       <img src="assets\img\plc\invt\65d3ff85b2bf6.jpg" alt="Image 1">
-     <h3>TS600 Series Intelligent PLC</h3>
-    </div>
-     
-    <div class="image-box">
-      <img src="https://via.placeholder.com/300x200" alt="Image 2">
-      <h3>Heading 2</h3>
+      <div class="title">TS600 Series Intelligent PLC</div>
     </div>
     <div class="image-box">
-      <img src="https://via.placeholder.com/300x200" alt="Image 3">
-      <h3>Heading 3</h3>
+      <img src="assets\img\plc\669757afba08e.jpg" alt="Image 2">
+      <div class="title">TM700 Series High-performance PLC</div>
     </div>
     <div class="image-box">
+      <img src="assets\img\plc\5f990feb792c2.jpg" alt="Image 3">
+      <div class="title">IVC1L Series Compact Cost-effective PLC</div>
+    </div>
+    <div class="image-box">
+      <img src="assets\img\plc\6507fd19622a1.jpg" alt="Image 4">
+      <div class="title">Flex Series I/O System</div>
+    </div>
+     <div class="image-box">
+      <img src="assets\img\plc\AX-Series-Motion-Controller-1.jpg" alt="Image 4">
+      <div class="title">AX PLC Motion Controller</div>
+    </div>
+  </div>
 
-      <img src="https://via.placeholder.com/300x200" alt="Image 4">
-      <h3>Heading 4</h3>
-    </div>
-  </div> -->
 
 
     
    
      
      <!-- End INVT Section -->
-
-
-
-     <!--Start PLC Section-->
-
-<div class="services-area bg-gray default-padding">
-     <div class="plc-type">
-    <div class="Image-box">
-      <h3>INVT</h3>
-      <a href="INVT.html">
-      <img src="\assets\img\invt-logo1.png" alt="INVT">
-      </a>
-    </div>
-    <div class="Image-box">
-      <h3>DELTA</h3>
-       <a href="Delta.html">
-      <img src="\assets\img\delta-logo1.png" alt="DELTA">
-      </a>
-    </div>
-    <div class="Image-box">
-      <h3>SEIMENS</h3>
-       <a href="Seimens.html">
-      <img src="\assets\img\Siemens-logo (1).jpg" alt="SEIMENS">
-      </a>
-    </div>
-  </div>
-</div>
 
            
     <!-- Start Footer 
