@@ -6,10 +6,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Onetouch Controlse">
+    <meta name="description" content="Onetouch Controls - PLC & HMI Solutions">
 
     <!-- ========== Page Title ========== -->
-    <title>Onetouch Controlse</title>
+    <title>PLC & HMI - Onetouch Controls</title>
 
     <!-- ========== Favicon Icon ========== -->
     <link rel="shortcut icon" href="assets/img/onetouch-logo.png" type="image/x-icon">
@@ -29,9 +29,51 @@
     <link href="assets/css/responsive.css" rel="stylesheet" />
     <!-- ========== End Stylesheet ========== -->
 
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 10px;
+    }
+
+    .plc-type {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 50px;
+      justify-content: center;
+    }
+
+    .Image-box {
+      width: 300px;
+      text-align: center;
+    }
+
+    .Image-box img {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .title {
+      margin-top: 10px;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .Image-box {
+        width: 45%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .Image-box {
+        width: 100%;
+      }
+    }
+  </style> 
 
     
-
 </head>
 
 <body class="it-solution">
@@ -40,22 +82,16 @@
     <div class="se-pre-con"></div>
     <!-- Preloader Ends -->
 
-    <!-- Start Header Top 
+      <!-- Start Header Top 
     ============================================= -->
     <div class="top-bar-area bg-dark text-light">
         <div class="container">
             <div class="row align-center">
                 <div class="col-lg-3 shape">
                     <ul class="social">
-                        <li class="facebook">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        </li>
-                        <li class="twitter">
+                        <!-- <li class="twitter">
                             <a href="#"><i class="fab fa-twitter"></i></a>
-                        </li>
-                        <li class="pinterest">
-                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                        </li>
+                        </li> -->
                         <li class="linkedin">
                             <a href="#"><i class="fab fa-linkedin-in"></i></a>
                         </li>
@@ -66,11 +102,11 @@
                         <ul class="list">
                             <li>
                                 <i class="fas fa-map-marker-alt"></i>
-                                Navi Mumbai, India
+                                Navi Mumbai, Maharashtra
                             </li>
                             <li>
                                 <i class="fas fa-envelope-open"></i>
-                                <a href="mailto:info@onetouchcontrols.in">info@onetouchcontrols.in</a>
+                                <a href="mailto:info@gmail.com">info@onetouchcontrols.in</a>
                             </li>
                         </ul>
                         
@@ -86,9 +122,31 @@
     <header id="home">
 
         <!-- Start Navigation -->
-        <nav class="navbar navbar-default inc-top-bar navbar-fixed navbar-transparent white bootsnav" style="background-color: white;">
+        <nav class="navbar navbar-default navbar-sticky bootsnav">
 
-            <div class="container" >
+            <!-- Start Top Search -->
+            <div class="top-search">
+                <div class="container">
+                    <form method="get">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                            <input type="text" class="form-control" placeholder="Search">
+                            <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- End Top Search -->
+
+            <div class="container">
+
+                <!-- Start Atribute Navigation -->
+                <div class="attr-nav">
+                    <ul>
+                        <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
+                    </ul>
+                </div>        
+                <!-- End Atribute Navigation -->
 
                 <!-- Start Header Navigation -->
                 <div class="navbar-header">
@@ -96,38 +154,55 @@
                         <i class="fa fa-bars"></i>
                     </button>
                     <a class="navbar-brand" href="index.html">
-                        <img src="assets/img/onetouch-logo.png" class="logo logo-display" alt="Logo">
-                        <img src="assets/img/onetouch-logo.png" class="logo logo-scrolled" alt="Logo">
+                        <img src="assets/img/one_touch_logo_b-1.png" class="logo" alt="Logo">
                     </a>
                 </div>
                 <!-- End Header Navigation -->
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="navbar-menu" >
+                <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav navbar-right" data-in="#" data-out="#">
                         <li class="dropdown">
-                            <a href="index.html" style="color: black;">Home</a>
+                            <a href="#" class=" active" >Home</a>
                         </li>
                         <li class="dropdown">
-                            <a href="about-us.html" style="color: black;">About Us</a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="product-details.html" class="dropdown-toggle" data-toggle="dropdown" style="color: black;" role="button" aria-haspopup="true" aria-expanded="false">Services</a>
+                            <a href="#" class="dropdown-toggle smooth-menu" data-toggle="dropdown" >Our Company</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="control-panel.html">Control Panel</a></li>
-                                <li><a class="dropdown-item" href="encoder.html">Encoder</a></li>
-                                <li><a class="dropdown-item" href="HMI.html">HMI</a></li>
-                                <li><a class="dropdown-item" href="machine-vision.html">Machine Vision</a></li>
-                                <li><a class="dropdown-item" href="motion-controller.html">Motion Controller</a></li>
-                                <li><a class="dropdown-item" href="PLC.html">PLC</a></li>
-                                <li><a class="dropdown-item" href="power-supply.html">Power Supply</a></li>
-                                <li><a class="dropdown-item" href="servo.html">Servo</a></li>
-                                <li><a class="dropdown-item" href="VFD.html">VFD</a></li>
-
+                                <li><a href="about-us.html">About Us</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="contact.html" style="color: black;">Contact Us</a>
+                        <!-- <li class="dropdown">
+                            <a href="gallery-grid-3-colum.html" class="smooth-menu" >Projects</a>
+                        </li> -->
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" onclick="return false;">Services</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="machine-vision.html">Machine Vision</a></li>
+                                <li><a href="robotics.html">Robotics</a></li>
+                                <li><a href="plcnew.html">PLC</a></li>
+                                <li><a href="hmi.html">HMI</a></li>
+                            </ul>
+                        </li>
+                        <!-- <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Team</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="team.html">Team Grid</a></li>
+                                <li><a href="team-carousel.html">Team Carousel</a></li>
+                                <li><a href="team-single.html">Team Single</a></li>
+                            </ul>
+                        </li> -->
+                        <!-- <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Blog</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="blog-standard.html">Blog Standard</a></li>
+                                <li><a href="blog-with-sidebar.html">Blog With Sidebar</a></li>
+                                <li><a href="blog-single.html">Blog Single</a></li>
+                                <li><a href="blog-single-with-sidebar.html">Blog Single With Sidebar</a></li>
+                            </ul>
+                        </li>-->
+                        <li> 
+                            <a href="contact.html">Contact Us</a>
                         </li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
@@ -139,100 +214,40 @@
     </header>
     <!-- End Header -->
 
-    <!-- Start Breadcrumb 
-    ============================================= -->
-    <div class="breadcrumb-area gradient-bg bg-cover shadow dark text-light text-center" style="background-image: url(assets/img/2440x1578.png);">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2">
-                    <h1>Our Services</h1>
-                    <ul class="breadcrumb">
-                        <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
-                        <li class="active">Services</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+
+   
+     
+     <!-- End INVT Section -->
+
+
+
+     <!--Start PLC Section-->
+
+<div class="services-area bg-gray default-padding">
+     <div class="plc-type">
+    <div class="Image-box">
+      <h3>INVT</h3>
+      <a href="hmi-invt.html">
+      <img src="assets/img/invt-logo1.png" alt="INVT">
+      </a>
     </div>
-    <!-- End Breadcrumb -->
-
-    
-    <!-- Start Work Porccess 
-    ============================================= -->
-    <div class="work-process-area relative default-padding bottom-less bg-fixed" style="background-image: url(assets/img/bg.png);">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2">
-                    <div class="site-heading ">
-                        <h4>SERVICE</h4>
-                        <h2>HMI (Human Machine Interface)</h2>
-                        <p>
-                            HMI (Human Machine Interface) is a medium for information exchange and mutual communication between
-                            electromechanical system's and the user. It allows the user to complete settings through touchable images or
-                            keys on the user-friendly window. This not only offer's fast and convenient control of manufacturing automation,
-                            but also has replaced traditional controlling panel's which needextensive wiring. </p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
+    <div class="Image-box">
+      <h3>DELTA</h3>
+       <a href="hmi-delta.html">
+      <img src="assets/img/delta-logo1.png" alt="DELTA">
+      </a>
     </div>
-    <!-- End Work Porccess -->
-
-    <!-- Start Services 
-    ============================================= -->
-    <div class="services-area carousel-shadow with-thumb bg-gray default-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="services-items services-carousel owl-carousel owl-theme">
-                        <!-- Single Item -->
-                        <div class="item">
-                            <div class="thumb">
-                                <img src="assets/img/Delta_HMI.png" alt="Thumb" style="height: 295px;">
-                            </div>
-                            <div class="info">
-                                <h4>
-                                    <a href="#">DELTA</a>
-                                </h4>
-                            </div>
-                        </div>
-                        <!-- End Single Item -->
-                        <!-- Single Item -->
-                        <div class="item">
-                            <div class="thumb">
-                                <img src="assets/img/mitsubishi-hmi-supplier-500x500.jpg" alt="Thumb" style="height: 295px;">
-                            </div>
-                            <div class="info">
-                                <h4>
-                                    <a href="#">MITSUBISHI</a>
-                                </h4>
-                            </div>
-                        </div>
-                        <!-- End Single Item -->
-                        <!-- Single Item -->
-                        <div class="item">
-                            <div class="thumb">
-                                <img src="assets/img/scheinder-hmi.jpg" alt="Thumb" style="height: 295px;">
-                            </div>
-                            <div class="info">
-                                <h4>
-                                    <a href="#">SCHIENDER</a>
-                                </h4>
-                            </div>
-                        </div>
-                        <!-- End Single Item -->
-
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="Image-box">
+      <h3>SEIMENS</h3>
+       <a href="Seimens.html">
+      <img src="assets/img/siemens-logo1.jpg" alt="SEIMENS">
+      </a>
     </div>
-    <!-- End Services -->
+  </div>
+</div>
 
-
-
-    <!-- Start Footer 
+           
+      <!-- Start Footer 
     ============================================= -->
     <footer class="bg-dark text-light">
         <div class="container">
@@ -274,18 +289,16 @@
                     <div class="col-lg-4 col-md-6 single-item">
                         <div class="f-item contact">
                             <h4 class="widget-title">Location</h4>
-                            <div class="map-container" style="height: 200px; border-radius: 8px; overflow: hidden; margin-top: 15px;">
-                                <iframe 
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.8449752193894!2d73.01615217526289!3d19.033067182145976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c30c6e9c7e5b%3A0x8c0f5c8e5b1e8e5b!2sGami%20Industrial%20Park%2C%20Pawne%2C%20MIDC%20Industrial%20Area%2C%20Turbhe%2C%20Navi%20Mumbai%2C%20Maharashtra%20400710!5e0!3m2!1sen!2sin!4v1703847389123!5m2!1sen!2sin"
-                                    width="100%" 
-                                    height="200" 
-                                    style="border:0;" 
-                                    allowfullscreen="" 
-                                    loading="lazy" 
-                                    referrerpolicy="no-referrer-when-downgrade"
-                                    title="Onetouch Controls Location">
-                                </iframe>
-                            </div>
+                            <!-- <iframe
+                               src="https://maps.app.goo.gl/wTsN1aSQhirWNUza9"
+                               width="600"
+                               height="450"
+                               style="border:0;"
+                               allowfullscreen=""
+                               loading="lazy"
+                               referrerpolicy="no-referrer-when-downgrade">
+                            </iframe> -->
+                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.3580114117744!2d73.02522357425224!3d19.091943851473744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7bff81f75576d%3A0xc02493ee63ab751a!2sOnetouch%20Controls!5e0!3m2!1sen!2sin!4v1752831277320!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </div>
@@ -312,16 +325,6 @@
     <script src="assets/js/count-to.js"></script>
     <script src="assets/js/bootsnav.js"></script>
     <script src="assets/js/main.js"></script>
-
-    <!-- Initialize components -->
-    <script>
-        $(document).ready(function() {
-            // Ensure dropdown works
-            $(".dropdown-toggle").dropdown();
-            
-            console.log("Page initialized successfully");
-        });
-    </script>
 
 </body>
 </html>
