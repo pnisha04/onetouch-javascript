@@ -80,6 +80,19 @@
       float:right;
       margin: 0px 200px 0px 20px
     }
+     .image-section:hover img{
+         transform: scale(1.1); /* Zoom effect */
+      filter: brightness(80%); /* Darken image */
+    }
+    .blog-inter{
+        background: rgba(30, 151, 191, 0.1);
+    padding: 25px;
+    border-radius: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+
+    }
 
     /* Responsive (stack on smaller screens) */
     @media (max-width: 768px) {
@@ -169,7 +182,7 @@
                         <i class="fa fa-bars"></i>
                     </button>
                     <a class="navbar-brand" href="index.html">
-                        <img src="assets\img\one_touch_logo_b-1.png" class="logo logo-display" alt="Logo">
+                        <img src="assets\img\onetouch-mainlogo2.jpg" class="logo logo-display" alt="Logo">
                         <!-- <img src="assets/img/onetouch-logo.png" class="logo logo-scrolled" alt="Logo"> -->
                     </a>
                 </div>
@@ -191,6 +204,10 @@
                                 <li><a href="robotics.html">Robotics</a></li>
                                 <li><a href="plcnew.html">PLC</a></li>
                                 <li><a href="hmi.html">HMI</a></li>
+                                <li><a href="vfd-new.html">VFD</a></li>
+                                <li><a href="servonew.html">Servo</a></li>
+
+
 
                             </ul>
                         </li>
@@ -210,6 +227,7 @@
 <div class="services-details-area default-padding">
   
         <div class="delta-container">
+              <div class="blog-inter">
         <!-- Left Side: Heading and Information -->
             <div class="text-section">
                <h2>DVP Series Slim CPU</h2>
@@ -220,12 +238,14 @@
 
     <!-- Right Side: Image -->
          <div class="image-section">
-             <img src="\assets\img\DVP-SV_M.png" alt="Example Image">
+             <img src="\assets\img\DVP-SV_M.png" alt="DVP Series Slim CPU">
          </div>
+       </div>
        </div>
      
      
         <div class="delta-container">
+              <div class="blog-inter">
         <!-- Left Side: Heading and Information -->
             <div class="text-section">
                <h2>AS Series Standard CPU</h2>
@@ -235,11 +255,13 @@
 
     <!-- Right Side: Image -->
          <div class="image-section">
-             <img src="assets\img\AS_SERIES_M.jpeg" alt="Example Image">
+             <img src="assets\img\AS_SERIES_M.jpeg" alt="AS Series Standard CPU">
          </div>
+       </div>
        </div>
       
         <div class="delta-container">
+              <div class="blog-inter">
         <!-- Left Side: Heading and Information -->
             <div class="text-section">
                <h2>AX-3 SeriesMotion CPU</h2>
@@ -249,11 +271,13 @@
 
     <!-- Right Side: Image -->
          <div class="image-section">
-             <img src="\assets\img\AX-3-Series.jpeg" alt="Example Image">
+             <img src="\assets\img\AX-3-Series.jpeg" alt="AX-3 SeriesMotion CPU">
          </div>
+       </div>
        </div>
      
         <div class="delta-container">
+              <div class="blog-inter">
         <!-- Left Side: Heading and Information -->
             <div class="text-section">
                <h2>DVP-MC</h2>
@@ -264,8 +288,9 @@
 
     <!-- Right Side: Image -->
          <div class="image-section">
-             <img src="assets\img\DVP50MC_M.png" alt="Example Image">
+             <img src="assets\img\DVP50MC_M.png" alt="DVP-MC">
          </div>
+       </div>
        </div>
      
   </div>

@@ -6,10 +6,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Onetouch Controlse">
+    <meta name="description" content="Onetouch Controls - PLC & HMI Solutions">
 
     <!-- ========== Page Title ========== -->
-    <title>Onetouch Controlse</title>
+    <title>PLC & HMI - Onetouch Controls</title>
 
     <!-- ========== Favicon Icon ========== -->
     <link rel="shortcut icon" href="assets/img/onetouch-logo.png" type="image/x-icon">
@@ -29,9 +29,75 @@
     <link href="assets/css/responsive.css" rel="stylesheet" />
     <!-- ========== End Stylesheet ========== -->
 
+  <style>
+     body {
+      font-family: Arial, sans-serif;
+      padding: 10px;
+    }
+    .services-details-area {
+        /* padding-bottom: 65px; */
+        padding-top: 120px;
+        
+    }
+    .invt-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 50px;
+      padding-top: 60px;
+      
+    }
+
+    .image-box {
+      width: 242px;
+      text-align: center;
+      
+    }
+
+    .image-box img {
+      width: 100%;
+      height: 70%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+       border: 1px solid #ddd;
+    }
+
+    .title {
+      margin-top: 10px;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    .image-box:hover img {
+      transform: scale(1.1); /* Zoom effect */
+      filter: brightness(80%); /* Darken image */
+    }
+     .blog-inter{
+        background: rgba(30, 151, 191, 0.1);
+    padding: 25px;
+    border-radius: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+
+    }
+
+    @media (max-width: 768px) {
+      .image-box {
+        width: 45%;
+       
+      }
+    }
+
+    @media (max-width: 480px) {
+      .image-box {
+        width: 100%;
+       
+      }
+    }
+  </style>
 
     
-
 </head>
 
 <body class="it-solution">
@@ -47,17 +113,17 @@
             <div class="row align-center">
                 <div class="col-lg-3 shape">
                     <ul class="social">
-                        <li class="facebook">
+                        <!-- <li class="facebook">
                             <a href="#"><i class="fab fa-facebook-f"></i></a>
                         </li>
-                        <li class="twitter">
+                         <li class="twitter">
                             <a href="#"><i class="fab fa-twitter"></i></a>
                         </li>
                         <li class="pinterest">
                             <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                        </li>
+                        </li> -->
                         <li class="linkedin">
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.linkedin.com/company/onetouchcontrols/"><i class="fab fa-linkedin-in"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -73,7 +139,6 @@
                                 <a href="mailto:info@onetouchcontrols.in">info@onetouchcontrols.in</a>
                             </li>
                         </ul>
-                        
                     </div>
                 </div>
             </div>
@@ -87,8 +152,27 @@
 
         <!-- Start Navigation -->
         <nav class="navbar navbar-default inc-top-bar navbar-fixed navbar-transparent white bootsnav" style="background-color: white;">
-
-            <div class="container" >
+                <!-- Start Top Search -->
+            <div class="top-search">
+                <div class="container">
+                    <form method="get">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                            <input type="text" class="form-control" placeholder="Search">
+                            <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- End Top Search -->
+            <div class="container">
+                <!-- Start Atribute Navigation -->
+                <div class="attr-nav">
+                    <ul>
+                        <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
+                    </ul>
+                </div>        
+                <!-- End Atribute Navigation -->
 
                 <!-- Start Header Navigation -->
                 <div class="navbar-header">
@@ -96,14 +180,14 @@
                         <i class="fa fa-bars"></i>
                     </button>
                     <a class="navbar-brand" href="index.html">
-                        <img src="assets/img/onetouch-logo.png" class="logo logo-display" alt="Logo">
-                        <img src="assets/img/onetouch-logo.png" class="logo logo-scrolled" alt="Logo">
+                        <img src="assets\img\onetouch-mainlogo2.jpg" class="logo logo-display" alt="Logo">
+                        <!-- <img src="assets/img/onetouch-logo.png" class="logo logo-scrolled" alt="Logo"> -->
                     </a>
                 </div>
                 <!-- End Header Navigation -->
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="navbar-menu" >
+                <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav navbar-right" data-in="#" data-out="#">
                         <li class="dropdown">
                             <a href="index.html" style="color: black;">Home</a>
@@ -112,17 +196,16 @@
                             <a href="about-us.html" style="color: black;">About Us</a>
                         </li>
                         <li class="dropdown">
-                            <a href="product-details.html" class="dropdown-toggle" data-toggle="dropdown" style="color: black;" role="button" aria-haspopup="true" aria-expanded="false">Services</a>
+                            <a href="product-details.html" class="dropdown-toggle" data-toggle="dropdown" style="color: black;">Services</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="control-panel.html">Control Panel</a></li>
-                                <li><a class="dropdown-item" href="encoder.html">Encoder</a></li>
-                                <li><a class="dropdown-item" href="HMI.html">HMI</a></li>
-                                <li><a class="dropdown-item" href="machine-vision.html">Machine Vision</a></li>
-                                <li><a class="dropdown-item" href="motion-controller.html">Motion Controller</a></li>
-                                <li><a class="dropdown-item" href="PLC.html">PLC</a></li>
-                                <li><a class="dropdown-item" href="power-supply.html">Power Supply</a></li>
-                                <li><a class="dropdown-item" href="servo.html">Servo</a></li>
-                                <li><a class="dropdown-item" href="VFD.html">VFD</a></li>
+                                <li><a href="machine-vision.html">Machine Vision</a></li>
+                                <li><a href="robotics.html">Robotics</a></li>
+                                <li><a href="plcnew.html">PLC</a></li>
+                                <li><a href="hmi.html">HMI</a></li>
+                                 <li><a href="vfd-new.html">VFD</a></li>
+                                <li><a href="servonew.html">Servo</a></li>
+
+
 
                             </ul>
                         </li>
@@ -138,105 +221,64 @@
 
     </header>
     <!-- End Header -->
-
-    <!-- Start Breadcrumb 
-    ============================================= -->
-    <div class="breadcrumb-area gradient-bg bg-cover shadow dark text-light text-center" style="background-image: url(assets/img/2440x1578.png);">
+ 
+       <div class="services-details-area default-padding">
+         <div class="blog-inter">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 offset-lg-2">
-                    <h1>Our Services</h1>
-                    <ul class="breadcrumb">
-                        <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
-                        <li class="active">Services</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Breadcrumb -->
-
-    
-    <!-- Start Work Porccess 
-    ============================================= -->
-    <div class="work-process-area relative default-padding bottom-less bg-fixed" style="background-image: url(assets/img/bg.png);">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2">
-                    <div class="site-heading ">
-                        <h4>SERVICE</h4>
-                        <h2>VFD</h2>
+                <div class="col-lg-12">
+                    <div class="services-single-info">
+                        <h2><b>General Servo System</b></h2>
                         <p>
-                            A control panel is a flat, often vertical, area where control or monitoring instruments are displayed. They are found in factories to monitor and control machines or production lines and in places such as nuclear power plants, ships, aircraft and mainframe computers. Older control panels are most often equipped with push buttons and analog instruments, whereas today in many cases touchscreens are used for monitoring and control purposes.
+                      INVT general servo system can provide high performance, high reliability, high quality, and cost-effective products to meet a variety of industrial environment and critical system applications and achieve the perfect combination of servo and program.
+
                         </p>
                     </div>
                 </div>
             </div>
-
         </div>
+    
+
+     <div class="invt-container">
+    <div class="image-box">
+      <img src="assets\img\Servo\servo-invt\IMS20B.jpg" alt="Image 1">
+      <div class="title">IMS20B Series General-purpose AC Servo Motor</div>
     </div>
-    <!-- End Work Porccess -->
-
-    <!-- Start Services 
-    ============================================= -->
-    <div class="services-area carousel-shadow with-thumb bg-gray default-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="services-items services-carousel owl-carousel owl-theme">
-                        <!-- Single Item -->
-                        <div class="item">
-                            <div class="thumb">
-                                <img src="assets/img/ABB-VFD.jpg" alt="Thumb"  style="height: 295px;">
-                            </div>
-                            <div class="info">
-                                <h4>
-                                    <a href="#">ABB VFD</a>
-                                </h4>
-                            </div>
-                        </div>
-                        <!-- End Single Item -->
-                        <!-- Single Item -->
-                        <div class="item">
-                            <div class="thumb">
-                                <img src="assets/img/DANFOSS-VFD.jfif" alt="Thumb"  style="height: 295px;">
-                            </div>
-                            <div class="info">
-                                <h4>
-                                    <a href="#">DANFOSS VFD</a>
-                                </h4>
-                            </div>
-                        </div>
-                        <!-- End Single Item -->
-                        <!-- Single Item -->
-                        <div class="item">
-                            <div class="thumb">
-                                <img src="assets/img/Delta-S1-VFD007s21A.jpg" alt="Thumb"  style="height: 295px;">
-                            </div>
-                            <div class="info">
-                                <h4>
-                                    <a href="#">DELTA VFD</a>
-                                </h4>
-                            </div>
-                        </div>
-                        <!-- End Single Item -->
-
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="image-box">
+      <img src="assets\img\Servo\servo-invt\DA200A.jpg" alt="Image 2">
+      <div class="title">DA200A AC Servo Drives</div>
     </div>
-    <!-- End Services -->
+    <div class="image-box">
+      <img src="assets\img\Servo\servo-invt\DA180A.jpg" alt="Image 3">
+      <div class="title">DA180A Series Basic AC Servo Drives</div>
+    </div>
+    <div class="image-box">
+      <img src="assets\img\Servo\servo-invt\DA180.jpg" alt="Image 4">
+      <div class="title">DA180 Economy AC Servo Drives</div>
+    </div>
+     <div class="image-box">
+      <img src="assets\img\Servo\servo-invt\DA200.jpg" alt="Image 4">
+      <div class="title">DA200 High Performance Servo Drives</div>
+    </div>
+    
+  </div>
+  </div>
+  </div>
 
 
 
+    
+   
+     
+     <!-- End INVT Section -->
+
+           
     <!-- Start Footer 
     ============================================= -->
     <footer class="bg-dark text-light">
         <div class="container">
             <div class="f-items default-padding">
                 <div class="row">
-
                     <!-- Single Item -->
                     <div class="col-lg-4 col-md-6 single-item">
                         <div class="f-item contact">
@@ -247,7 +289,7 @@
                             <ul>
                                 <li>
                                     <i class="fas fa-map-marker-alt"></i>
-                                    Mumbai, Maharashtra
+                                    Navi Mumbai, Maharashtra
                                 </li>
                                 <li>
                                     <i class="fas fa-envelope-open"></i>
@@ -273,7 +315,7 @@
                         <div class="f-item contact">
                             <h4 class="widget-title">Location</h4>
                             <div class="map-container" style="height: 200px; border-radius: 8px; overflow: hidden; margin-top: 15px;">
-                                <iframe 
+                                <!-- <iframe 
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.8449752193894!2d73.01615217526289!3d19.033067182145976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c30c6e9c7e5b%3A0x8c0f5c8e5b1e8e5b!2sGami%20Industrial%20Park%2C%20Pawne%2C%20MIDC%20Industrial%20Area%2C%20Turbhe%2C%20Navi%20Mumbai%2C%20Maharashtra%20400710!5e0!3m2!1sen!2sin!4v1703847389123!5m2!1sen!2sin"
                                     width="100%" 
                                     height="200" 
@@ -282,7 +324,9 @@
                                     loading="lazy" 
                                     referrerpolicy="no-referrer-when-downgrade"
                                     title="Onetouch Controls Location">
-                                </iframe>
+                                </iframe> -->
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.3580114117744!2d73.02522357425224!3d19.091943851473744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7bff81f75576d%3A0xc02493ee63ab751a!2sOnetouch%20Controls!5e0!3m2!1sen!2sin!4v1752831277320!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
                             </div>
                         </div>
                     </div>
@@ -310,16 +354,6 @@
     <script src="assets/js/count-to.js"></script>
     <script src="assets/js/bootsnav.js"></script>
     <script src="assets/js/main.js"></script>
-
-    <!-- Initialize components -->
-    <script>
-        $(document).ready(function() {
-            // Ensure dropdown works
-            $(".dropdown-toggle").dropdown();
-            
-            console.log("Page initialized successfully");
-        });
-    </script>
 
 </body>
 </html>

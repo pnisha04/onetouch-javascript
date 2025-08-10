@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Onetouch Controls - PLC & HMI Solutions">
+
+    <!-- ========== Page Title ========== -->
+    <title>Servo-Delta - Onetouch Controls</title>
+
+    <!-- ========== Favicon Icon ========== -->
+    <link rel="shortcut icon" href="assets/img/onetouch-logo.png" type="image/x-icon">
+
+    <!-- ========== Start Stylesheet ========== -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="assets/css/icofont.min.css" rel="stylesheet" />
+    <link href="assets/css/themify-icons.css" rel="stylesheet" />
+    <link href="assets/css/flaticon-set.css" rel="stylesheet" />
+    <link href="assets/css/magnific-popup.css" rel="stylesheet" />
+    <link href="assets/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="assets/css/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="assets/css/animate.css" rel="stylesheet" />
+    <link href="assets/css/bootsnav.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet" />
+    <!-- ========== End Stylesheet ========== -->
+
+
+
+<style>
+    
+      
+    body {
+      /* font-family: Arial, sans-serif; */
+      /* margin: 0; */
+      /* padding: 0; */
+      /* padding: 10px; */
+    }
+    
+
+    .delta-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 40px;
+      gap: 20px;
+    }
+
+    .text-section {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .text-section h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    .text-section p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #555;
+      padding-bottom: 55px;
+    }
+
+    .image-section {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .image-section img {
+      width: 350px;
+      height: auto;
+      border-radius: 10px;
+      float:right;
+      margin: 0px 200px 0px 20px
+    }
+     .image-section:hover img{
+         transform: scale(1.1); /* Zoom effect */
+      filter: brightness(80%); /* Darken image */
+    }
+    .blog-inter{
+        background: rgba(30, 151, 191, 0.1);
+    padding: 25px;
+    border-radius: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+
+    }
+   .hmi-delta-details{
+    /* padding: 40px; */
+    padding-top: 120px;
+    padding-bottom: 120px;
+   }
+
+    /* Responsive (stack on smaller screens) */
+    @media (max-width: 768px) {
+      .delta-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .text-section, .image-section {
+        max-width: 100%;
+      }
+    }
+
+    
+  </style>
+  
+
+    
+</head>
+
+<body class="it-solution">
+
+    <!-- Preloader Start -->
+    <div class="se-pre-con"></div>
+    <!-- Preloader Ends -->
+
+    <!-- Start Header Top 
+    ============================================= -->
+    <div class="top-bar-area bg-dark text-light">
+        <div class="container">
+            <div class="row align-center">
+                <div class="col-lg-3 shape">
+                    <ul class="social">
+                        <li class="linkedin">
+                            <a href="https://www.linkedin.com/company/onetouchcontrols/"><i class="fab fa-linkedin-in"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-9 info float-right text-right">
+                    <div class="info box">
+                        <ul class="list">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                Navi Mumbai, India
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope-open"></i>
+                                <a href="mailto:info@onetouchcontrols.in">info@onetouchcontrols.in</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Header Top -->
+
+    <!-- Header 
+    ============================================= -->
+    <header id="home">
+
+        <!-- Start Navigation -->
+        <nav class="navbar navbar-default inc-top-bar navbar-fixed navbar-transparent white bootsnav" style="background-color: white;">
+              <!-- Start Top Search -->
+            <div class="top-search">
+                <div class="container">
+                    <form method="get">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                            <input type="text" class="form-control" placeholder="Search">
+                            <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- End Top Search -->
+            <div class="container">
+                 <!-- Start Atribute Navigation -->
+                <div class="attr-nav">
+                    <ul>
+                        <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
+                    </ul>
+                </div>        
+                <!-- End Atribute Navigation -->
+
+                <!-- Start Header Navigation -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets\img\onetouch-mainlogo2.jpg" class="logo logo-display" alt="Logo">
+                        <!-- <img src="assets/img/onetouch-logo.png" class="logo logo-scrolled" alt="Logo"> -->
+                    </a>
+                </div>
+                <!-- End Header Navigation -->
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav navbar-right" data-in="#" data-out="#">
+                        <li class="dropdown">
+                            <a href="index.html" style="color: black;">Home</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="about-us.html" style="color: black;">About Us</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="product-details.html" class="dropdown-toggle" data-toggle="dropdown" style="color: black;">Services</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="machine-vision.html">Machine Vision</a></li>
+                                <li><a href="machine-vision.html">Machine Vision</a></li>
+                                <li><a href="robotics.html">Robotics</a></li>
+                                <li><a href="plcnew.html">PLC</a></li>
+                                <li><a href="hmi.html">HMI</a></li>
+                                <li><a href="vfd-new.html">VFD</a></li>
+                                <li><a href="servonew.html">Servo</a></li>
+
+
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="contact.html" style="color: black;">Contact Us</a>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div>
+
+        </nav>
+        <!-- End Navigation -->
+
+    </header>
+    <!-- End Header -->
+
+<div class="hmi-delta-details">
+    <div class="delta-container">
+         <div class="blog-inter">
+        <!-- Delta-HMI-DOP-03BQ -->
+        <div class="text-section">
+            <h2>Delta ASDA - A3 Series</h2>
+            <p>
+ASDA-A3 Series having features such as multi-functionality, high-performance, energy-efficiency, and compact design.
+
+ASDA-A3 Series provides 3.1 kHz of bandwidth and employs a 24-bit absolute type encoder, creating advantages are high response, precise locating, and stable and flexible performance. This series has added new functions such as vibration suppression, system diagnosis, and a shared DC-bus design which can regenerate energy. ASDA-A3 Series offers a comprehensive technology and solution to help our customers enhance their machine’s precision and achieve excellent performance.            </p>
+        </div>
+        <div class="image-section">
+           <img src="assets\img\Servo\servo-delta\ASDA-A3-Series.webp" alt="Example Image">
+
+        </div>
+        </div>
+    </div>
+
+    <div class="delta-container">
+         <div class="blog-inter">
+        <!-- Delta HMI - DOP 107BV -->
+        <div class="text-section">
+            <h2>Delta ASDA - A2 Series</h2>
+            <p>
+ASDA-A2 series servo motors and servo drives is the high-performance motion control.
+There are five models of ASDA-A2 series: ASDA-A2-L, ASDA-A2-M, ASDA-A2-F, ASDA-A2-U, ASDA-A2-E<br>
+ASDA-A2-Soft configuration software provides internal parameter editing function for defining the path of each axis freely.
+            </p>
+        </div>
+        <div class="image-section">
+          <img src="assets\img\Servo\servo-delta\ASDA-A2-Series.webp" alt="Example Image">
+
+        </div>
+        </div>
+    </div>
+
+    <div class="delta-container">
+         <div class="blog-inter">
+        <!-- Delta HMI - DOP-107EV -->
+        <div class="text-section">
+            <h2>Delta ASDA - B3 Series</h2>
+            <p>
+                ASDA-B3 Series features high tolerance, stable operation and high precision motion control functions. It creates a highly efficient, user-friendly operation environment for equipment and optimizes production efficiency and output value.
+
+Offering the best motion control solutions, Delta is boosting industry momentum and working with customers to create an innovative future.
+            </p>
+        </div>
+        <div class="image-section">
+        <img src="assets\img\Servo\servo-delta\ASDA-B3.webp" alt="Example Image">
+
+        </div>
+        </div>
+    </div>
+
+</div>
+           
+    <!-- Start Footer 
+    ============================================= -->
+    <footer class="bg-dark text-light">
+        <div class="container">
+            <div class="f-items default-padding">
+                <div class="row">
+                    <!-- Single Item -->
+                    <div class="col-lg-4 col-md-6 single-item">
+                        <div class="f-item contact">
+                            <h4 class="widget-title">Contact Us</h4>
+                            <p>
+                                Unit No.43,"B" Wing,3rd Floor,Gami Industrial Park, Pawne, MIDC Industrial Area, Turbhe, Navi Mumbai, Maharashtra 400710
+                            </p>
+                            <ul>
+                                <li>
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Navi Mumbai, Maharashtra
+                                </li>
+                                <li>
+                                    <i class="fas fa-envelope-open"></i>
+                                    <a href="mailto:info@onetouchcontrols.in">info@onetouchcontrols.in</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 single-item">
+                        <div class="f-item contact">
+                            <h4 class="widget-title">Quick links</h4>
+                            <ul style="list-style-type: disclosure-closed;">
+                                <li>
+                                    <a href="about-us.html">About Us</a>
+                                </li>
+                                <li>
+                                    <a href="contact.html">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 single-item">
+                        <div class="f-item contact">
+                            <h4 class="widget-title">Location</h4>
+                            <div class="map-container" style="height: 200px; border-radius: 8px; overflow: hidden; margin-top: 15px;">
+                                <!-- <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.8449752193894!2d73.01615217526289!3d19.033067182145976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c30c6e9c7e5b%3A0x8c0f5c8e5b1e8e5b!2sGami%20Industrial%20Park%2C%20Pawne%2C%20MIDC%20Industrial%20Area%2C%20Turbhe%2C%20Navi%20Mumbai%2C%20Maharashtra%20400710!5e0!3m2!1sen!2sin!4v1703847389123!5m2!1sen!2sin"
+                                    width="100%" 
+                                    height="200" 
+                                    style="border:0;" 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade"
+                                    title="Onetouch Controls Location">
+                                </iframe> -->
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.3580114117744!2d73.02522357425224!3d19.091943851473744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7bff81f75576d%3A0xc02493ee63ab751a!2sOnetouch%20Controls!5e0!3m2!1sen!2sin!4v1752831277320!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- jQuery Frameworks
+    ============================================= -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.appear.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/modernizr.custom.13711.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/progress-bar.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/jquery.simpleLoadMore.js"></script>
+    <script src="assets/js/count-to.js"></script>
+    <script src="assets/js/bootsnav.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
