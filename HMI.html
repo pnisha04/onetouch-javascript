@@ -29,13 +29,66 @@
     <link href="assets/css/responsive.css" rel="stylesheet" />
     <!-- ========== End Stylesheet ========== -->
 
-<style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 10px;
+ <!-- <style>
+ * {
+      box-sizing: border-box;
     }
 
-    .plc-type {
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    .image-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .image-box {
+      flex: 1 1 calc(25% - 20px); /* 4 per row */
+      background: #fff;
+      padding: 10px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .image-box img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .image-box h3 {
+      margin-top: 10px;
+      font-size: 1.1em;
+    }
+
+    @media (max-width: 768px) {
+      .image-box {
+        flex: 1 1 calc(50% - 20px); /* 2 per row */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .image-box {
+        flex: 1 1 100%; /* 1 per row */
+      }
+    }
+  </style> 
+   <style>
+     body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      padding: 0;
+      background: #f9f9f9;
+    }
+
+    .container {
       display: flex;
       flex-wrap: wrap;
       gap: 50px;
@@ -43,8 +96,53 @@
     }
 
     .Image-box {
-      width: 300px;
+      flex: 1 1 300px;
+      max-width: 300px;
       text-align: center;
+    }
+
+    .Image-box h3 {
+      margin-bottom: 10px;
+      font-size: 50px;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .Image-box img {
+      width: 100%;
+      height: 75%;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 768px) {
+      .Image-box {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+    }
+</style>-->
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 10px;
+    }
+  .breadcrumb-area h2{
+    font-size:100px;
+  }
+    .plc-type {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 50px;
+      justify-content: center;
+      padding-top: 70px;
+    }
+
+    .Image-box {
+      width: 246px;
+      text-align: center;
+      padding-bottom: 120px;
+      height: 285px;
     }
 
     .Image-box img {
@@ -52,6 +150,10 @@
       height: 100%;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+     .Image-box:hover img{
+         transform: scale(1.1); /* Zoom effect */
+      filter: brightness(80%); /* Darken image */
     }
 
     .title {
@@ -123,6 +225,7 @@
 
         <!-- Start Navigation -->
         <nav class="navbar navbar-default navbar-sticky bootsnav">
+
             <!-- Start Top Search -->
             <div class="top-search">
                 <div class="container">
@@ -153,7 +256,7 @@
                         <i class="fa fa-bars"></i>
                     </button>
                     <a class="navbar-brand" href="index.html">
-                        <img src="assets/img/one_touch_logo_b-1.png" class="logo" alt="Logo">
+                        <img src="assets/img/onetouch-mainlogo2.jpg" class="logo" alt="Logo">
                     </a>
                 </div>
                 <!-- End Header Navigation -->
@@ -177,10 +280,14 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" onclick="return false;">Services</a>
                             <ul class="dropdown-menu">
-                                <li><a href="machine-vision.html">Machine Vision</a></li>
-                                <li><a href="robotics.html">Robotics</a></li>
-                                <li><a href="plcnew.html">PLC</a></li>
-                                <li><a href="hmi.html">HMI</a></li>
+                              <li><a href="machine-vision.html">Machine Vision</a></li>
+                              <li><a href="robotics.html">Robotics</a></li>
+                              <li><a href="plcnew.html">PLC</a></li>
+                              <li><a href="hmi.html">HMI</a></li>
+                               <li><a href="vfd-new.html">VFD</a></li>
+                               <li><a href="servonew.html">Servo</a></li>
+
+
                             </ul>
                         </li>
                         <!-- <li class="dropdown">
@@ -222,28 +329,34 @@
 
      <!--Start PLC Section-->
 
-<div class="services-area bg-gray default-padding">
-     <div class="plc-type">
-    <div class="Image-box">
-      <h3>INVT</h3>
+<!-- <div class="services-area bg-gray default-padding"> -->
+<!-- <div class="container"> -->
+ <div class="breadcrumb-area gradient-bg bg-cover shadow dark text-light text-center" style="background-image: url(assets/img/hmi-solutionsimg_Factory_Automation_banner.jpg);">
+<h2>HMI</h2>
+</div>
+<div class="plc-type">
+   <div class="Image-box">
+      <h2>INVT</h2>
       <a href="hmi-invt.html">
-      <img src="assets/img/invt-logo1.png" alt="INVT">
-      </a>
+        <img src="assets/img/invtlogo.png" alt="INVT">
+    </a>
     </div>
     <div class="Image-box">
-      <h3>DELTA</h3>
+      <h2>DELTA</h2>
        <a href="hmi-delta.html">
-      <img src="assets/img/delta-logo1.png" alt="DELTA">
-      </a>
+        <img src="assets/img/delta-logo1.png" alt="DELTA">
+    </a>
     </div>
     <div class="Image-box">
-      <h3>SEIMENS</h3>
-       <a href="Seimens.html">
-      <img src="assets/img/siemens-logo1.jpg" alt="SEIMENS">
-      </a>
+      <h2>SEIMENS</h2>
+       <a href="hmi-seimens.html">
+        <img src="assets/img/siemens-logo1.jpg" alt="SEIMENS">
+    </a>
     </div>
   </div>
-</div>
+
+<!-- </div> -->
+
 
            
       <!-- Start Footer 
